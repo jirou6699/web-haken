@@ -10,9 +10,9 @@
         【写真掲載】
       %ul.Job-images
         %li.Job-images__list1
-          = form.label :image, class: "Job-images__list1--img" do
+          = form.label :image1, class: "Job-images__list1--img" do
             = icon('fas', 'image')
-            = form.file_field :image, class: 'Job-images__list1--file'
+            = form.file_field :image1, class: 'Job-images__list1--file'
         %li.Job-images__list
     .Vacancy-contents
       .Vacancy-title
@@ -22,47 +22,37 @@
           %td.Vacancy-item__left
             勤務地
           %td.Vacancy-item__right
-            = form.text_field :text, placeholder: 'ここに文章を入力してください'
+            = form.text_field :description, placeholder: 'ここに文章を入力してください'
         %tr.Vacancy-item
           %td.Vacancy-item__left
             給与
           %td.Vacancy-item__right
-            = form.text_field :text, placeholder: 'ここに文章を入力してください'
+            = form.text_field :salary, placeholder: 'ここに文章を入力してください'
         %tr.Vacancy-item
           %td.Vacancy-item__left
             アクセス
           %td.Vacancy-item__right
-            = form.text_field :text, placeholder: 'ここに文章を入力してください'
+            = form.text_field :access, placeholder: 'ここに文章を入力してください'
         %tr.Vacancy-item
           %td.Vacancy-item__left
             勤務時間
           %td.Vacancy-item__right
-            = form.text_field :text, placeholder: 'ここに文章を入力してください'
+            = form.text_field :time, placeholder: 'ここに文章を入力してください'
         %tr.Vacancy-item
           %td.Vacancy-item__left
             曜日・日数
           %td.Vacancy-item__right
-            = form.text_field :text, placeholder: 'ここに文章を入力してください'
+            = form.text_field :week, placeholder: 'ここに文章を入力してください'
         %tr.Vacancy-item
           %td.Vacancy-item__left
             募集人数
           %td.Vacancy-item__right
-            = form.text_field :text, placeholder: 'ここに文章を入力してください'
+            = form.text_field :emplyee, placeholder: 'ここに文章を入力してください'
         %tr.Vacancy-item
           %td.Vacancy-item__left
             契約期間
           %td.Vacancy-item__right
-            = form.text_field :text, placeholder: 'ここに文章を入力してください'
-        %tr.Vacancy-item
-          %td.Vacancy-item__left
-            営業担当
-          %td.Vacancy-item__right
-            = form.text_field :text, placeholder: 'ここに文章を入力してください'
-        %tr.Vacancy-item
-          %td.Vacancy-item__left
-            都道府県
-          %td.Vacancy-item__right
-            = form.text_field :text, placeholder: 'ここに文章を入力してください'
+            = form.text_field :term, placeholder: 'ここに文章を入力してください'
       .Staff-contents
         .Staff-contents__title
           【担当営業】
