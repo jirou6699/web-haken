@@ -4,7 +4,7 @@
 %ul.Bottom-wrapper
   - @lists.each do |list|
     %li.Contents
-      = image_tag list.image1.url, class: 'Top-content'
+      = image_tag list.image1.url, class: 'Top-content' if list.image1.present?
       %table.Middle-content
         %tr.Text-content
           %td.Text-content__left
