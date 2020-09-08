@@ -91,13 +91,14 @@
 }
 
 .Bottom-wrapper {
-  // height: 800px;
+  height: 470px;
   background-color: lightblue;
   margin: 0 auto;
-  // width: 1200px;
+  width: 1200px;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
+  overflow-y: scroll;
   .Contents {
     height: 450px;
     width: 330px;
