@@ -106,15 +106,18 @@
     padding: 15px;
     .Top-content {
       background-color: gray;
-      width: auto;
+      width: 300px;
       height: 250px;
+      &__img {
+      height: 250px;
+      object-fit: cover;
+      width: 100%;
+      }
     }
     .Middle-content {
-      
       &__left {
       }
       &__right {
-        
       }
     }
     .Bottom-content {
