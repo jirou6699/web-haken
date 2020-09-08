@@ -16,6 +16,16 @@ class JobsController < ApplicationController
     list.destroy
   end
 
+  def edit
+    @job = Job.find(params[:id])
+  end
+
+  def update
+    job = Job.find(params[:id])
+    job.update(job_params)
+  end
+
+
   private
 
   def job_params
