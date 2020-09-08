@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
   root "jobs#index"
-  resources :jobs, only: [:new, :create]
+  resources :jobs, only: [:new, :create, :destroy]
 end
