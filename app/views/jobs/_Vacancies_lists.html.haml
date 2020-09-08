@@ -22,7 +22,7 @@
           %td.Text-content__right
             =list.term
       .Bottom-content
-        = link_to 'http://www.pikawaka.com', class: "Bottom-Contents__btn" do
+        = link_to '#', class: "Bottom-Contents__btn" do
           編集
-        = link_to 'http://www.pikawaka.com', class: "Bottom-Contents__btn" do
+        = link_to job_path(list.id), class: "Bottom-Contents__btn", method: :delete do
           削除

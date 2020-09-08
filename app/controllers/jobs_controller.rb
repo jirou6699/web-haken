@@ -11,6 +11,11 @@ class JobsController < ApplicationController
     @job = Job.create(job_params)
   end
 
+  def destroy
+    list = Job.find(params[:id])
+    list.destroy
+  end
+
   private
 
   def job_params
