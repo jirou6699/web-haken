@@ -1,0 +1,26 @@
+.Header {
+  height: 80px;
+  background-color: aqua;
+  display: flex;
+  margin: 0 15px;
+  .Header-logo {
+    line-height: 80px;
+    width: 50%;
+  }
+  .Header-right{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__img {
+      width: 60px;
+      height: 60px;
+    }
+    &__text {
+      
+    }
+    &__signup {
+
+    }
+  }
+}
