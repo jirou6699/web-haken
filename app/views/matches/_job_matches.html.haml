@@ -1,3 +1,41 @@
+.Top-wrapper
+  = image_tag 'image.png', class: 'Top-wrapper__image'
+  .Top-wrapper__login
+    Login
+
+.Info-wrapper
+  .Title
+    新着情報
+  .Message-lists
+    .Message-lists__box
+      .Message-lists__box--date
+        2020/08/24
+      .Message-lists__box--message
+        キャプションキャプションキャプションキャプションキャプション
+    .Message-lists__box
+      .Message-lists__box--date
+        2020/08/24
+      .Message-lists__box--message
+        キャプションキャプションキャプションキャプションキャプション
+    .Message-lists__box
+      .Message-lists__box--date
+        2020/08/24
+      .Message-lists__box--message
+        キャプションキャプションキャプションキャプションキャプション
+    .Message-lists__box
+      .Message-lists__box--date
+        2020/08/24
+      .Message-lists__box--message
+        キャプションキャプションキャプションキャプションキャプション
+
+.Message-wrapper
+  .Message-title
+    仕事内容一覧
+  .Search-box
+    = form_with url: "#" do |form|
+      = form.text_field :text, class: 'Seach-box__input', placeholder: '仕事を検索する'
+      = form.submit '検索', class: 'Search-box__button'
+
 .Title
   .Title__text
     登録案件一覧
