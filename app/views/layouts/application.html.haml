@@ -12,7 +12,7 @@
     = link_to root_path, class: 'Header-logo' do
       COMPANY LOGO
     .Header-right
-      = image_tag 'image.png', class: 'Header-right__img'
+      = icon('fas', 'user-circle', class: 'Header-right__img')
       = link_to jobs_path, class: "Header-right__text" do
         企業担当者はこちら
       - if user_signed_in?
