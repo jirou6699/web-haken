@@ -12,13 +12,9 @@
     = link_to root_path, class: 'Header-logo' do
       COMPANY LOGO
     .Header-right
-      - if user_signed_in?
-        .Header-right__img
-          = @users.image
-      - else
-        = icon('fas', 'user-circle', class: 'Header-right__img')
-        = link_to jobs_path, class: "Header-right__text" do
-          企業担当者はこちら
+      = icon('fas', 'user-circle', class: 'Header-right__img')
+      = link_to jobs_path, class: "Header-right__text" do
+        企業担当者はこちら
       - if user_signed_in?
         .Header-right__signup
           = link_to destroy_user_session_path, method: :delete do
@@ -27,6 +23,5 @@
         .Header-right__signup
           = link_to new_user_registration_path do
             新規登録
-
   = yield
   .Footer
