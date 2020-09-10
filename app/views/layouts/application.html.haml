@@ -15,7 +15,7 @@
       = image_tag 'image.png', class: 'Header-right__img'
       = link_to jobs_path, class: "Header-right__text" do
         企業担当者はこちら
-      .Header-right__signup
+      = link_to new_user_registration_path, class: 'Header-right__signup' do
         Sign Up
   = yield
   .Footer
