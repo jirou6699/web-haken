@@ -12,7 +12,8 @@
     = link_to root_path, class: 'Header-logo' do
       COMPANY LOGO
     .Header-right
-      = icon('fas', 'user-circle', class: 'Header-right__img')
+      .Header-right__img
+        -# = current_user.image.url class: 'Header-right__img--file'
       = link_to jobs_path, class: "Header-right__text" do
         企業担当者はこちら
       - if user_signed_in?
