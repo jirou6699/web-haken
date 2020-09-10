@@ -1,7 +1,7 @@
 
 .Top-wrapper
   = image_tag 'image.png', class: 'Top-wrapper__image'
-  .Top-wrapper__login
+  = link_to user_session_path, class: 'Top-wrapper__login' do
     Login
 
 .Info-wrapper
