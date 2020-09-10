@@ -9,13 +9,20 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
   .Header
-    .Header-logo
+    = link_to root_path, class: 'Header-logo' do
       COMPANY LOGO
     .Header-right
       = image_tag 'image.png', class: 'Header-right__img'
       = link_to jobs_path, class: "Header-right__text" do
         企業担当者はこちら
-      .Header-right__signup
-        Sign Up
+      - if user_signed_in?
+        .Header-right__signup
+          = link_to destroy_user_session_path, method: :delete do
+            ログアウト
+      - else
+        .Header-right__signup
+          = link_to new_user_registration_path do
+            新規登録
+
   = yield
   .Footer
