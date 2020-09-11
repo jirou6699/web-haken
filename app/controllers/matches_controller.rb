@@ -6,6 +6,7 @@ class MatchesController < ApplicationController
   end
 
   def show
+    @match = Job.find(params[:id])
   end
 
   def search

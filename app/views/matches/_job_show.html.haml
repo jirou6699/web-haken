@@ -4,7 +4,7 @@
   .Job-wrapper
     .Upper-contents
       .Upper-contents__name
-        残業なしカジュアルOK！ あっとホーム環境◎ 引継ぎしっかり◎
+        = match.title
     .Pr-contents
       .Pr-title
         PRポイント
@@ -18,7 +18,7 @@
     .Image-contents
       %ul.Job-images
         %li.Job-images__list1
-          1
+          = image_tag match.image1.url, class: 'Job-images__list1--img' if match.image1.present?
         %li.Job-images__list
           2
         %li.Job-images__list
@@ -33,37 +33,37 @@
           %td.Vacancy-item__left
             勤務地
           %td.Vacancy-item__right
-            テスト
+            = match.description
         %tr.Vacancy-item
           %td.Vacancy-item__left
             給与
           %td.Vacancy-item__right
-            テスト
+            = match.salary
         %tr.Vacancy-item
           %td.Vacancy-item__left
             アクセス
           %td.Vacancy-item__right
-            テスト
+            = match.access
         %tr.Vacancy-item
           %td.Vacancy-item__left
             勤務時間
           %td.Vacancy-item__right
-            テスト
+            = match.time
         %tr.Vacancy-item
           %td.Vacancy-item__left
             曜日・日数
           %td.Vacancy-item__right
-            テスト
+            = match.week
         %tr.Vacancy-item
           %td.Vacancy-item__left
             募集人数
           %td.Vacancy-item__right
-            テスト
+            = match.emplyee
         %tr.Vacancy-item
           %td.Vacancy-item__left
             契約期間
           %td.Vacancy-item__right
-            テスト
+            = match.term
         %tr.Vacancy-item
           %td.Vacancy-item__left
             営業担当
