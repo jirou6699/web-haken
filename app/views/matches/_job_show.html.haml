@@ -1,0 +1,114 @@
+.Wrapper
+  .Title-wrapper
+    仕事内容
+  .Job-wrapper
+    .Upper-contents
+      .Upper-contents__name
+        残業なしカジュアルOK！ あっとホーム環境◎ 引継ぎしっかり◎
+    .Pr-contents
+      .Pr-title
+        PRポイント
+      .Pr-box
+        .Pr-box__text
+          テストテストテストテストテストテストテストテスト
+        .Pr-box__text
+          テストテストテストテストテストテストテストテスト
+        .Pr-box__text
+          テストテストテストテストテストテストテストテスト
+    .Image-contents
+      %ul.Job-images
+        %li.Job-images__list1
+          1
+        %li.Job-images__list
+          2
+        %li.Job-images__list
+          3
+        %li.Job-images__list
+          4
+        %li.Job-images__list
+          5
+    .Vacancy-contents
+      %table.Vacancy-infos
+        %tr.Vacancy-item
+          %td.Vacancy-item__left
+            勤務地
+          %td.Vacancy-item__right
+            テスト
+        %tr.Vacancy-item
+          %td.Vacancy-item__left
+            給与
+          %td.Vacancy-item__right
+            テスト
+        %tr.Vacancy-item
+          %td.Vacancy-item__left
+            アクセス
+          %td.Vacancy-item__right
+            テスト
+        %tr.Vacancy-item
+          %td.Vacancy-item__left
+            勤務時間
+          %td.Vacancy-item__right
+            テスト
+        %tr.Vacancy-item
+          %td.Vacancy-item__left
+            曜日・日数
+          %td.Vacancy-item__right
+            テスト
+        %tr.Vacancy-item
+          %td.Vacancy-item__left
+            募集人数
+          %td.Vacancy-item__right
+            テスト
+        %tr.Vacancy-item
+          %td.Vacancy-item__left
+            契約期間
+          %td.Vacancy-item__right
+            テスト
+        %tr.Vacancy-item
+          %td.Vacancy-item__left
+            営業担当
+          %td.Vacancy-item__right
+            テスト
+        %tr.Vacancy-item
+          %td.Vacancy-item__left
+            都道府県
+          %td.Vacancy-item__right
+            テスト
+      .Question-box
+        = link_to 'http://www.pikawaka.com', class: "Question-box__btn" do
+          チャットで質問する！
+
+  .Review-wrapper
+    .Review-wrapper__title
+      みんなの口コミ
+    .Review-wrapper__list
+      .Review-infomation
+        .Review-infomation__left
+          .Review-infomation__left--good
+          【よかった点】
+          .Review-infomation__left--text
+          つつつつううううううううううううううううううう
+          .Review-infomation__left--good
+          【わるかった点】
+          .Review-infomation__left--text
+          えええええええええええええええええええええええ
+        .Review-infomation__right
+          = link_to 'http://www.pikawaka.com', class: "Review-infomation__right--edit" do
+            編集
+          = link_to 'http://www.pikawaka.com', class: ".Review-infomation__right--destroy" do
+            削除
+    .Review-wrapper__up
+      = image_tag 'image.png', class: 'Review-wrapper__up--image'
+    .Review-wrapper__title
+      感想を教えて！
+    .Review-wrapper__form
+      = form_with url: "#" do |form|
+        .Review-box
+          .Review-box__good
+            【よかった点】
+          = form.text_area :text, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
+          .Review-box__bad
+            【わるかった点】
+          = form.text_area :text, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
+        .Review-button
+          = form.submit 'レビュー'

@@ -62,7 +62,7 @@
           %td.Text-content__right
             =match.term
       .Bottom-content
-        = link_to '#', class: "Bottom-Contents__btn", method: :get do
+        = link_to match_path(match.id), class: "Bottom-Contents__btn" do
           編集
         = link_to '#', class: "Bottom-Contents__btn", method: :delete do
           いいね
