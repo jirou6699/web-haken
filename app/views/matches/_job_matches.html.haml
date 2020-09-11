@@ -33,8 +33,8 @@
   .Message-title
     仕事内容一覧
   .Search-box
-    = form_with url: "#" do |form|
-      = form.text_field :text, class: 'Seach-box__input', placeholder: '仕事を検索する'
+    = form_with url: search_matches_path, local: true, method: :get do |form|
+      = form.text_field :keyword, class: 'Seach-box__input', placeholder: '仕事を検索する'
       = form.submit '検索', class: 'Search-box__button'
 
 .Title

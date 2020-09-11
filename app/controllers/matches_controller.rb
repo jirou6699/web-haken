@@ -8,6 +8,10 @@ class MatchesController < ApplicationController
   def show
   end
 
+  def search
+    @matches = Job.search(params[:keyword])
+  end
+  
   def move_to_index
     unless user_signed_in?
       redirect_to action: :index
