@@ -101,14 +101,13 @@
       = image_tag 'image.png', class: 'Review-wrapper__up--image'
     .Review-wrapper__title
       感想を教えて！
-    .Review-wrapper__form
-      = form_with url: "#" do |form|
-        .Review-box
-          .Review-box__good
-            【よかった点】
-          = form.text_area :text, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
-          .Review-box__bad
-            【わるかった点】
-          = form.text_area :text, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
-        .Review-button
-          = form.submit 'レビュー'
+    = form_with model: [@review, @] , html: {class: "Review-wrapper__form"}, local: true do |form|
+      .Review-box
+        .Review-box__good
+          【よかった点】
+        = form.text_area :text, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
+        .Review-box__bad
+          【わるかった点】
+        = form.text_area :text, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
+      .Review-button
+        = form.submit 'レビュー'
