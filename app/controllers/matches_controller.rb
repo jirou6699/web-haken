@@ -7,6 +7,8 @@ class MatchesController < ApplicationController
 
   def show
     @match = Job.find(params[:id])
+    @review = Review.new
+    @reviews = @match.reviews.inclues(:user)
   end
 
   def search
