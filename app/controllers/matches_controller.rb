@@ -12,7 +12,7 @@ class MatchesController < ApplicationController
   end
 
   def search
-    @matches = Review.search(params[:keyword])
+    @matches = Job.search(params[:keyword])
   end
   
   def move_to_index
