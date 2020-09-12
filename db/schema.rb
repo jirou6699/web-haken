@@ -27,7 +27,8 @@ ActiveRecord::Schema.define(version: 2020_09_11_063401) do
   end
 
   create_table "reviews", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.text "comment", null: false
+    t.text "good", null: false
+    t.text "bad", null: false
     t.bigint "job_id"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
