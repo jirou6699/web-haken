@@ -6,5 +6,7 @@ Rails.application.routes.draw do
       get 'search'
     end 
   end
-  resources :jobs, only: [:index, :new, :create, :destroy, :edit, :update]
+  resources :jobs, only: [:index, :new, :create, :destroy, :edit, :update] do
+    resources :reviews, only: :create
+  end
 end
