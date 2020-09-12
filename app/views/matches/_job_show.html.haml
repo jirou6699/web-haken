@@ -101,7 +101,7 @@
       = image_tag 'image.png', class: 'Review-wrapper__up--image'
     .Review-wrapper__title
       感想を教えて！
-    = form_with model: [@matche, @review] , html: {class: "Review-wrapper__form"}, local: true do |form|
+    = form_with model: [match, review] , html: {class: "Review-wrapper__form"}, local: true do |form|
       .Review-box
         .Review-box__good
           【よかった点】
