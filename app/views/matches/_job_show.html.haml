@@ -82,21 +82,22 @@
     .Review-wrapper__title
       みんなの口コミ
     .Review-wrapper__list
-      .Review-infomation
-        .Review-infomation__left
-          .Review-infomation__left--good
-          【よかった点】
-          .Review-infomation__left--text
-          つつつつううううううううううううううううううう
-          .Review-infomation__left--good
-          【わるかった点】
-          .Review-infomation__left--text
-          えええええええええええええええええええええええ
-        .Review-infomation__right
-          = link_to 'http://www.pikawaka.com', class: "Review-infomation__right--edit" do
-            編集
-          = link_to 'http://www.pikawaka.com', class: ".Review-infomation__right--destroy" do
-            削除
+      - @reviews.each do |review|
+        .Review-infomation
+          .Review-infomation__left
+            .Review-infomation__left--good
+            【よかった点】
+            .Review-infomation__left--text
+              =review.good
+            .Review-infomation__left--good
+            【わるかった点】
+            .Review-infomation__left--text
+              =review.good
+          .Review-infomation__right
+            = link_to 'http://www.pikawaka.com', class: "Review-infomation__right--edit" do
+              編集
+            = link_to job_review_path(review.job.id, review.id), class: ".Review-infomation__right--destroy", method: :delete do
+              削除
     .Review-wrapper__up
       = image_tag 'image.png', class: 'Review-wrapper__up--image'
     .Review-wrapper__title

@@ -7,6 +7,6 @@ Rails.application.routes.draw do
     end 
   end
   resources :jobs, only: [:index, :new, :create, :destroy, :edit, :update] do
-    resources :reviews, only: [:create]
+    resources :reviews, only: [:create, :destroy]
   end
 end
