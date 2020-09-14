@@ -15,11 +15,11 @@
       .Header-right__img
         -# = current_user.image.url class: 'Header-right__img--file'
       = link_to jobs_path, class: "Header-right__text" do
-        企業担当者はこちら
+        = icon('far', 'building', class: 'Header-right__text--building')
       - if user_signed_in?
-        .Header-right__signup
+        .Header-right__logout
           = link_to destroy_user_session_path, method: :delete do
-            ログアウト
+            = icon('fas', 'sign-out-alt', class: 'Header-right__logout--sign-out-alt')
       - else
         .Header-right__signup
           = link_to new_user_registration_path do
