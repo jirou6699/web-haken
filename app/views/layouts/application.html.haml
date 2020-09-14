@@ -9,20 +9,29 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
   .Header
-    = link_to root_path, class: 'Header-logo' do
-      COMPANY LOGO
+    .Header-logo
+      = link_to root_path do
+        COMPANY LOGO
     .Header-right
-      .Header-right__img
-        -# = current_user.image.url class: 'Header-right__img--file'
-      = link_to jobs_path, class: "Header-right__text" do
-        = icon('far', 'building', class: 'Header-right__text--building')
       - if user_signed_in?
+        .Header-right__img
+          = image_tag current_user.image.to_s, class: 'Header-right__img--file'
+        .Header-right__company
+          = link_to jobs_path do
+            .Header-right__company--building
+              = icon('far', 'building')
         .Header-right__logout
           = link_to destroy_user_session_path, method: :delete do
-            = icon('fas', 'sign-out-alt', class: 'Header-right__logout--sign-out-alt')
+            .Header-right__logout--sign-out-alt
+              = icon('fas', 'sign-out-alt')
       - else
+        .Header-right__company
+          = link_to jobs_path do
+            .Header-right__company--building
+              = icon('far', 'building')
         .Header-right__signup
           = link_to new_user_registration_path do
-            新規登録
+            .Header-right__signup--sign-in-alt
+              = icon('fas', 'sign-in-alt')
   = yield
   .Footer
