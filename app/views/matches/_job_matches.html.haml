@@ -1,33 +1,44 @@
 .Wrapper-match
   .Top-wrapper
-    .Top-wrapper__login
-      = link_to user_session_path, class: 'Top-wrapper__login--text' do
+    %ul.Top-images
+      %li.Top-images__image1
+        1
+      %li.Top-images__image2
+        2
+      %li.Top-images__image
+        3
+      %li.Top-images__image
+        4
+      -# %li.Top-images__image
+      -#   5
+    .Top-login
+      = link_to user_session_path, class: 'Top-login__text' do
         Login
 
-.Info-wrapper
-  .Title
-    新着情報
-  .Message-lists
-    .Message-lists__box
-      .Message-lists__box--date
-        2020/08/24
-      .Message-lists__box--message
-        キャプションキャプションキャプションキャプションキャプション
-    .Message-lists__box
-      .Message-lists__box--date
-        2020/08/24
-      .Message-lists__box--message
-        キャプションキャプションキャプションキャプションキャプション
-    .Message-lists__box
-      .Message-lists__box--date
-        2020/08/24
-      .Message-lists__box--message
-        キャプションキャプションキャプションキャプションキャプション
-    .Message-lists__box
-      .Message-lists__box--date
-        2020/08/24
-      .Message-lists__box--message
-        キャプションキャプションキャプションキャプションキャプション
+  .Info-wrapper
+    .Title
+      新着情報
+    .Message-lists
+      .Message-lists__box
+        .Message-lists__box--date
+          2020/08/24
+        .Message-lists__box--message
+          キャプションキャプションキャプションキャプションキャプション
+      .Message-lists__box
+        .Message-lists__box--date
+          2020/08/24
+        .Message-lists__box--message
+          キャプションキャプションキャプションキャプションキャプション
+      .Message-lists__box
+        .Message-lists__box--date
+          2020/08/24
+        .Message-lists__box--message
+          キャプションキャプションキャプションキャプションキャプション
+      .Message-lists__box
+        .Message-lists__box--date
+          2020/08/24
+        .Message-lists__box--message
+          キャプションキャプションキャプションキャプションキャプション
 
 .Message-wrapper
   .Message-title

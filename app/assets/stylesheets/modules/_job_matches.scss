@@ -10,17 +10,39 @@
 .Top-wrapper {
   background-color: rebeccapurple;
   position: relative;
-  width: 100%;
-  height: 600px;
-  &__login {
+  padding: 5px;
+  .Top-images {
+      display:grid;
+      grid-gap: 1rem;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      &__image1 {
+        background-color: gray;
+        grid-row: 1 / span 2;
+        height: 700px;
+        &--img {            //実際の画像をいれる//
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+      &__image2 {
+        grid-column:2 /span 2 ;
+        background-color: gray;
+      }
+      &__image {
+        background-color: gray;
+      }
+    }
+  .Top-login{
     position: absolute;
     top:400px;
     right:50%;
-    &--text {
+    &__text {
       color: seashell;
     }
   }
 }
+
 
 .Info-wrapper {
   // height: 200px;
