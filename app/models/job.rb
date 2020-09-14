@@ -1,5 +1,5 @@
 class Job < ApplicationRecord
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   mount_uploader :image1, ImageUploader
 
   def self.search(search)

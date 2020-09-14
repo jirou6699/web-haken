@@ -1,32 +1,39 @@
 .Header {
   height: 80px;
+  width: 55vw;
+  margin: 0 auto;
   background-color: aqua;
   display: flex;
-  margin: 0 15px;
   .Header-logo {
     line-height: 80px;
-    width: 50%;
+    width: 75%;
   }
   .Header-right{
-    width: 50%;
+    width: 25%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     &__img {
       width: 60px;
       height: 60px;
+      border-radius: 100%;
       background-color: rosybrown;
-      &--file{
-      height: 20px;
+      &--file {
+      display: block;
+      height: 60px;
+      border-radius: 100%;
       object-fit: cover;
       width: 100%;
       }
     }
-    &__text {
-      
+    &__company {
+      font-size: 25px;
     }
     &__signup {
-
+      font-size: 25px;
+    }
+    &__logout {
+      font-size: 25px;
     }
   }
 }
