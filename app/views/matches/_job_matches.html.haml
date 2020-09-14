@@ -49,9 +49,9 @@
         .Upper-job__no
           job.no eeeeeeee
       - @matches.each do |match|
+        .Job-catch
+          =match.title
         .Contents
-          .Job-catch
-            =match.title
           .Top-content
             = image_tag match.image1.url, class: 'Top-content__img' if match.image1.present?
           .Middle-content
