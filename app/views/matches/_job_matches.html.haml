@@ -40,56 +40,67 @@
         .Message-lists__box--message
           キャプションキャプションキャプションキャプションキャプション
    
+  .Under-info
+    .Under-info__icon
+      =icon('far','folder-open', class: 'Under-info__icon--folder')
+    .Under-info__text
+      お仕事一覧
    
   .Under-wrapper
     .Bar-left
-      - @matches.each do |match|
-        .Job-box
-          .Upper-job
-            .Upper-job__new
-              NEW
-            .Upper-job__no
-              job.no eeeeeeee
-          .Job-catch
-            .Job-catch__textarea
-              .Job-catch__textarea--text
-                =match.title
-            .Job-catch__box
-              .Job-catch_box--star
-                = icon('far', 'star')
-                気になる！
-          .Contents
-            .Content-left
-              = image_tag match.image1.url, class: 'Content-left__img' if match.image1.present?
-            .Content-right
-              .Text-content
-                .Text-content__left
-                  = icon('far', 'file-alt')
-                .Text-content__right
-                  =match.occupation
-              .Text-content
-                .Text-content__left
-                  = icon('fas', 'yen-sign')
-                .Text-content__right
-                  =match.salary
-              .Text-content
-                .Text-content__left
-                  = icon('far', 'calendar-alt')
-                .Text-content__right
-                  =match.term
-              .Text-content
-                .Text-content__left
-                  = icon('fas', 'map-marker-alt')
-                .Text-content__rightlong
-                  =match.access
-          = link_to match_path(match.id), class: "Job-catch__box--text" do
-            編集
+      .Bar-left__upper
+        .Bar-left__upper--title
+          応募可能な全てのお仕事を公開しています
+        .Bar-left__upper--text
+          ページネーションが入ります。
+      .Bar-left__middle
+        - matches.each do |match|
+          .Job-box
+            .Upper-job
+              .Upper-job__new
+                NEW
+              .Upper-job__no
+                job.no eeeeeeee
+            .Job-catch
+              .Job-catch__textarea
+                .Job-catch__textarea--text
+                  =match.title
+              .Job-catch__box
+                .Job-catch_box--star
+                  = icon('far', 'star')
+                  気になる！
+            .Contents
+              .Content-left
+                = image_tag match.image1.url, class: 'Content-left__img' if match.image1.present?
+              .Content-right
+                .Text-content
+                  .Text-content__left
+                    = icon('far', 'file-alt')
+                  .Text-content__right
+                    =match.occupation
+                .Text-content
+                  .Text-content__left
+                    = icon('fas', 'yen-sign')
+                  .Text-content__right
+                    =match.salary
+                .Text-content
+                  .Text-content__left
+                    = icon('far', 'calendar-alt')
+                  .Text-content__right
+                    =match.term
+                .Text-content
+                  .Text-content__left
+                    = icon('fas', 'map-marker-alt')
+                  .Text-content__rightlong
+                    =match.access
+            = link_to match_path(match.id) do
+              詳細
 
     .Bar-right
-      .Message-wrapper
-        .Message-title
+      .Search-wrapper
+        .Search-title
           仕事を検索する
         .Search-box
           = form_with url: search_matches_path, local: true, method: :get do |form|
-            = form.text_field :keyword, class: 'Seach-box__input', placeholder: '仕事を検索する'
+            = form.text_field :keyword, class: 'Search-box__input', placeholder: '仕事を検索する'
             = form.submit '検索', class: 'Search-box__button'
