@@ -90,9 +90,18 @@
 
     .Review-wrapper
       .Review-wrapper__title
-        みんなの口コミ
+        みんなの口コミ！（会社・仕事）
       .Review-wrapper__list
         - @reviews.each do |review|
+          .Review-top
+            .Review-icons
+              .Reiview-icons__face
+                =image_tag current_user.image.to_s, class: 'Review-icons__face--image'
+              .Review-icons__nickname
+                =current_user.nickname
+            .Review-time
+              =review.updated_at
+
           .Review-infomation
             .Review-infomation__left
               .Review-infomation__left--good
@@ -104,10 +113,9 @@
               .Review-infomation__left--text
                 =review.good
             .Review-infomation__right
-              = link_to 'http://www.pikawaka.com', class: "Review-infomation__right--edit" do
-                編集
-              = link_to job_review_path(review.job.id, review.id), class: ".Review-infomation__right--destroy", method: :delete do
+              = link_to job_review_path(review.job.id, review.id), class: "Review-infomation__right--destroy", method: :delete do
                 削除
+
       .Review-wrapper__up
         = image_tag 'image.png', class: 'Review-wrapper__up--image'
       .Review-wrapper__title
