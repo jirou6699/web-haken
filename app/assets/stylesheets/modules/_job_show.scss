@@ -115,11 +115,12 @@
 .Review-wrapper {
   margin-top: 30px;
   &__title {
+    height: 300px;
+    overflow: scroll;
   }
   &__list {
     padding: 15px;
-    background-color: moccasin;
-    height: 400px;
+    background-color: linen;
   }
   &__up {
     text-align: center;
@@ -132,59 +133,68 @@
     height: 300px;
     padding: 15px;
     background-color: moccasin;
-    .Review-box {
-      background-color: oldlace;
-      &__good {
+  }
+}
+
+.Review-box {
+  background-color: oldlace;
+  &__good {
+  }
+  &__text {
+    width: 100%;
+    height: 100px;
+  }
+}
+.Review-button {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  &__submit {
+    padding: 3px;
+  }
+}
+
+.Review-wrapper__list {
+  overflow: slide;
+  .Review-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed lightslategrey;
+    .Review-icons {
+      display: flex;
+      line-height: 40px;
+      &__face {
+        border-radius: 100%;
+        // background-color: rosybrown;
+        height: 40px;
+        width: 40px;
+        &--image {
+          display: block;
+          height: 40px;
+          width: 40px;
+          border-radius: 100%;
+          object-fit: cover;
+        }
       }
-      &__text {
-        width: 100%;
-        height: 100px;
+      &__nickname{
+        padding-left: 5px;
       }
     }
-    .Review-button {
-      width: 100%;
-      text-align: center;
+    .Review-time{
+      line-height: 40px;
     }
   }
 }
   
-.Review-top {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 10px;
-  border-bottom: 1px dashed lightyellow;
-  .Review-icons {
-    display: flex;
-    line-height: 40px;
-    &__face {
-      border-radius: 100%;
-      background-color: rosybrown;
-      height: 40px;
-      width: 40px;
-      &--image {
-        display: block;
-        height: 40px;
-        width: 40px;
-        border-radius: 100%;
-        object-fit: cover;
-      }
-    }
-    &__nickname{
-      padding-left: 5px;
-    }
-  }
-  .Review-time{
-    line-height: 40px;
-  }
-}
-
 .Review-infomation {
-  background-color: lime;
+  border: 1px solid lightsteelblue;
+  border-radius: 10px;
   display: flex;
   margin-top: 10px;
   &__left {
     padding: 10px;
-    background-color: mediumaquamarine;
+    // background-color: mediumaquamarine;
     width: 90%;
     &--text {
       height: 60px;
@@ -193,9 +203,15 @@
     } 
   }
   &__right {
-    background-color: mediumturquoise;
+    // background-color: mediumturquoise;
     width: 10%;
+    text-align: center;
+    line-height: 208px;
     &--destroy {
+      font-size: 20px;
+    }
+    &--trash {
+      color: lightslategrey;
     }
   }
 }
