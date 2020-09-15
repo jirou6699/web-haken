@@ -2,14 +2,22 @@
   box-sizing: border-box;
 }
 
+.Max-width {
+  width: 69vh;
+  background-color: gainsboro;
+}
+
 .Wrapper {
+  margin: 0 auto; 
   max-width: 800px;
-  margin: 0 auto;
+
 }
 
 .Title-wrapper {
-  text-align: center;
-  // background-color: hotpink;
+  background-color: ghostwhite;
+  font-size: 30px;
+  height: 70px;
+  padding-left: 98px;
 }
 
 .Job-wrapper{
@@ -48,6 +56,13 @@
       }
     }
   }
+
+
+
+
+
+
+  
   .Vacancy-contents {
     .Vacancy-infos {
       width: 800px;
