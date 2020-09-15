@@ -1,15 +1,16 @@
 class CreateJobs < ActiveRecord::Migration[6.0]
   def change
     create_table :jobs do |t|
-      t.text :title
-      t.string :image1
-      t.text :description
-      t.string :salary
-      t.text :access
-      t.string :time
-      t.string :week
-      t.string :emplyee
-      t.string :term
+      t.text :title,             null: false
+      t.string :occupation,      null: false
+      t.string :image1,          null: false
+      t.text :description,       null: false
+      t.string :salary,          null: false
+      t.text :access,            null: false
+      t.string :time,            null: false
+      t.string :week,            null: false
+      t.string :emplyee,         null: false
+      t.string :term,            null: false
       t.timestamps
     end
   end

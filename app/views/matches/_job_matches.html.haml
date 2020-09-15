@@ -43,38 +43,47 @@
    
   .Under-wrapper
     .Bar-left
-      .Upper-job
-        .Upper-job__new
-          NEW
-        .Upper-job__no
-          job.no eeeeeeee
       - @matches.each do |match|
-        .Job-catch
-          =match.title
-        .Contents
-          .Top-content
-            = image_tag match.image1.url, class: 'Top-content__img' if match.image1.present?
-          .Middle-content
-            .Text-content
-              .Text-content__left
-                仕事内容
-              .Text-content__right
+        .Job-box
+          .Upper-job
+            .Upper-job__new
+              NEW
+            .Upper-job__no
+              job.no eeeeeeee
+          .Job-catch
+            .Job-catch__textarea
+              .Job-catch__textarea--text
                 =match.title
-            .Text-content
-              .Text-content__left
-                時給
-              .Text-content__right
-                =match.salary
-            .Text-content
-              .Text-content__left
-                終業期間
-              .Text-content__right
-                =match.term
-          .Bottom-content
-            = link_to match_path(match.id), class: "Bottom-Contents__btn" do
-              編集
-            = link_to '#', class: "Bottom-Contents__btn", method: :delete do
-              いいね！
+            .Job-catch__box
+              .Job-catch_box--star
+                = icon('far', 'star')
+                気になる！
+          .Contents
+            .Content-left
+              = image_tag match.image1.url, class: 'Content-left__img' if match.image1.present?
+            .Content-right
+              .Text-content
+                .Text-content__left
+                  = icon('far', 'file-alt')
+                .Text-content__right
+                  =match.occupation
+              .Text-content
+                .Text-content__left
+                  = icon('fas', 'yen-sign')
+                .Text-content__right
+                  =match.salary
+              .Text-content
+                .Text-content__left
+                  = icon('far', 'calendar-alt')
+                .Text-content__right
+                  =match.term
+              .Text-content
+                .Text-content__left
+                  = icon('fas', 'map-marker-alt')
+                .Text-content__rightlong
+                  =match.access
+          = link_to match_path(match.id), class: "Job-catch__box--text" do
+            編集
 
     .Bar-right
       .Message-wrapper

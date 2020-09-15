@@ -20,6 +20,11 @@
       %table.Vacancy-infos
         %tr.Vacancy-item
           %td.Vacancy-item__left
+            職種
+          %td.Vacancy-item__right
+            = form.text_field :occupation, placeholder: '営業事務'
+        %tr.Vacancy-item
+          %td.Vacancy-item__left
             勤務地
           %td.Vacancy-item__right
             = form.text_field :description, placeholder: 'ここに文章を入力してください'
