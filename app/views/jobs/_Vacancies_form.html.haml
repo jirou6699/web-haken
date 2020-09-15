@@ -1,77 +1,67 @@
-.Max-width
-  .Title-wrapper
+.Vacancies-width
+  .Open-wrapper
     求人情報を公開する
   .Wrapper
-    = form_with model: job, html: {class: "Job-wrapper"}, local: true do |form|
-      .User-contents__title
-        【仕事のキャッチコピーを入力】
-        = form.text_field :title, maxlength: 64, class: 'Upper-contents__name', placeholder: 'ここに文章を入力してください'
-      .Image-contents
-        .Image-contents__post
-          【写真掲載】
-        %ul.Job-images
-          %li.Job-images__list1
-            = form.label :image1, class: "Job-images__list1--img" do
-              = icon('fas', 'image')
-              = form.file_field :image1, class: 'Job-images__list1--file'
-          %li.Job-images__list
+    = form_with model: job, html: {class: "Job-admin"}, local: true do |form|
+      .Job-admin__title
+        仕事のタイトルを入力しましょう
+      .Job-admin__text
+        = form.text_field :title, class: 'job-admin__text--title', placeholder: 'ここに文章を入力してください'
+      .Company-images
+        .Company-images__text
+          写真を掲載しましょう
+        .Company-image
+          .Company__image
+            = form.label :image1, class: "Company-image__img" do
+              = form.file_field :image1, class: 'Company-image__--file'
 
 
-          
-      .Vacancy-contents
-        .Vacancy-title
+
+      .Vacancy
+        .Write-title
           【求人詳細記入】
-        %table.Vacancy-infos
-          %tr.Vacancy-item
-            %td.Vacancy-item__left
+        .Write-infos
+          .Vacancy-writes
+            .Vacancy-writes__left
               職種
-            %td.Vacancy-item__right
+            .Vacancy-writes__right
               = form.text_field :occupation, placeholder: '営業事務'
-          %tr.Vacancy-item
-            %td.Vacancy-item__left
+          .Vacancy-writes
+            .Vacancy-writes__left
               勤務地
-            %td.Vacancy-item__right
+            .Vacancy-writes__right
               = form.text_field :description, placeholder: 'ここに文章を入力してください'
-          %tr.Vacancy-item
-            %td.Vacancy-item__left
+          .Vacancy-writes
+            .Vacancy-writes__left
               給与
-            %td.Vacancy-item__right
+            .Vacancy-writes__right
               = form.text_field :salary, placeholder: 'ここに文章を入力してください'
-          %tr.Vacancy-item
-            %td.Vacancy-item__left
+          .Vacancy-writes
+            .Vacancy-writes__left
               アクセス
-            %td.Vacancy-item__right
+            .Vacancy-writes__right
               = form.text_field :access, placeholder: 'ここに文章を入力してください'
-          %tr.Vacancy-item
-            %td.Vacancy-item__left
+          .Vacancy-writes
+            .Vacancy-writes__left
               勤務時間
-            %td.Vacancy-item__right
+            .Vacancy-writes__right
               = form.text_field :time, placeholder: 'ここに文章を入力してください'
-          %tr.Vacancy-item
-            %td.Vacancy-item__left
+          .Vacancy-writes
+            .Vacancy-writes__left
               曜日・日数
-            %td.Vacancy-item__right
+            .Vacancy-writes__right
               = form.text_field :week, placeholder: 'ここに文章を入力してください'
-          %tr.Vacancy-item
-            %td.Vacancy-item__left
+          .Vacancy-writes
+            .Vacancy-writes__left
               募集人数
-            %td.Vacancy-item__right
+            .Vacancy-writes__right
               = form.text_field :emplyee, placeholder: 'ここに文章を入力してください'
-          %tr.Vacancy-item
-            %td.Vacancy-item__left
+          .Vacancy-writes
+            .Vacancy-writes__left
               契約期間
-            %td.Vacancy-item__right
+            .Vacancy-writes__right
               = form.text_field :term, placeholder: 'ここに文章を入力してください'
-        .Staff-contents
-          .Staff-contents__title
-            【担当営業】
-          .Sales-staffs
-            .Sales-staff__name
-              "山田 太郎"
-            .Sales-staff__name
-              "石倉 香"
-            .Sales-staff__name
-              "山口 上"
+        
         .Pr-contents
           .Pr-title
             PRポイント
