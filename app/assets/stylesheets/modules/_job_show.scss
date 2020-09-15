@@ -2,31 +2,61 @@
   box-sizing: border-box;
 }
 
+.Max-width {
+  width: 69vw;
+  margin:0 auto;
+  // background-color: gold;
+}
+
 .Wrapper {
   max-width: 800px;
   margin: 0 auto;
+  padding-top: 20px;
+}
+
+.Job-infomation {
+ border-radius: 5px;
+ padding: 10px;
+ border: 1px solid black;
 }
 
 .Title-wrapper {
-  text-align: center;
-  background-color: hotpink;
+  display: flex;
+  justify-content: space-between;
+  &__newinfo {
+    font-size: 13px;
+    padding: 2px;
+    border: 1px solid red;
+    border-radius: 2px;
+    &--color {
+      color: red;
+    }
+  }
+  &__jobno {
+    font-size: 13px;
+  }
 }
 
-.Job-wrapper{
+.Jobwrapper-info{
+  margin-top: 5px;
   .Upper-contents {
-    text-align: center;
-    background-color: khaki;
+    // background-color: lavender;
+    line-height: 60px;
+    border-bottom: 1px solid burlywood;
   }
+}
   .Pr-contents {
     background-color: lemonchiffon;
+    border-radius: 5px;
+    margin-top: 10px;
     .Pr-title {
-
     }
     .Pr-box {
-      background-color:forestgreen;
+      padding: 5px 0;
     }
   }
   .Image-contents {
+    margin-top: 10px;
     .Job-images {
       display:grid;
       grid-gap: 1rem;
@@ -38,39 +68,53 @@
         grid-column: 1.5 / span 2;
         height: 300px;
         &--img {
+          border-radius: 10px;
           height: 100%;
           object-fit: cover;
           width: 100%;
         }
       }
       &__list {
+        border-radius: 10px;
         background-color: gray;
       }
     }
   }
   .Vacancy-contents {
+    margin-top: 10px;
     .Vacancy-infos {
-      width: 800px;
+      width:100%;
       .Vacancy-item {
+        height: 60px;
+        border: 1px solid black;
         &__left {
           width: 25%;
+          padding-left: 10px;
           background-color: lightcoral;
         }
         &__right {
           width: 75%;
+          padding-left: 10px;
           background-color: lightskyblue;
         }
       }
     }
-    .Question-box {
-      text-align: center;
-      &__btn {
+    .Question-contents {
+      margin-top: 10px;
+      &__box {
+        margin: 0 auto;
+        width: 200px;
+        height: 50px;
+        text-align: center;
+        &--btn {
+          line-height: 50px;
+         }
       }
     }
   }
-}
 
 .Review-wrapper {
+  margin-top: 10px;
   &__title {
   }
   &__list {
