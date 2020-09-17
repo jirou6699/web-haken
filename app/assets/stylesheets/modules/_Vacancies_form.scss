@@ -14,7 +14,6 @@
 }
 
 .Open-wrapper {
-  background-color: ghostwhite;
   font-size: 30px;
   height: 70px;
   padding-left: 98px;
@@ -22,31 +21,61 @@
 
 .Job-admin {
   &__title{
-    margin:30px 0;
+    margin-bottom: 5px;
     font-size: 25px;
+  }
+  &__text {
+    &--title {
+    }
   }
 }
 
 input[type="text"] {
-  width: 600px;
+  width: 500px;
   height: 50px;
 }
 
 .Company-images {
+  margin-top: 20px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid white;
   &__text{
-    margin:30px 0;
     font-size: 25px;
+    margin-top: 5px;
   }
 }
 
 .Vacancy {
-  
+  margin-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid white;
+  .Write-title {
+    font-size: 25px;
+  }
+  .Write-infos {
+    margin-top: 20px;
+  }
+  .Pr-contents {
+  }
+}
+
+.Vacancy-writes {
+  &__left {
+    margin: 5px 0;
+  }
+  &__right {
+    &--text {
+    }
+  }
 }
 
 
+.Pr-writes {
+  margin-top: 40px;
+  &__title {
+    font-size: 25px;
 
-.Pr-contents {
-  // 他のscssで同じものを作成している
+  }
 }
 .Button-wrapper {
   // background-color: forestgreen;

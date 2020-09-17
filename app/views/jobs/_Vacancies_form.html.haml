@@ -6,26 +6,26 @@
       .Job-admin__title
         仕事のタイトルを入力しましょう
       .Job-admin__text
-        = form.text_field :title, class: 'job-admin__text--title', placeholder: 'ここに文章を入力してください'
+        = form.text_field :title, class: 'Job-admin__text--title', placeholder: 'ここに文章を入力してください'
       .Company-images
         .Company-images__text
           写真を掲載しましょう
-        .Company-image
-          .Company__image
-            = form.label :image1, class: "Company-image__img" do
-              = form.file_field :image1, class: 'Company-image__--file'
+        .Company-images__image
+          .Company-images__image--file
+            = form.label :image1 do
+              = form.file_field :image1
 
 
 
       .Vacancy
         .Write-title
-          【求人詳細記入】
+          求人詳細を記入しましょう
         .Write-infos
           .Vacancy-writes
             .Vacancy-writes__left
               職種
             .Vacancy-writes__right
-              = form.text_field :occupation, placeholder: '営業事務'
+              = form.text_field :occupation, class: "Vacancy-writes__right", placeholder: '営業事務'
           .Vacancy-writes
             .Vacancy-writes__left
               勤務地
@@ -62,18 +62,18 @@
             .Vacancy-writes__right
               = form.text_field :term, placeholder: 'ここに文章を入力してください'
         
-        .Pr-contents
-          .Pr-title
-            PRポイント
-          .Pr-box
-            .Pr-box__text
-              残業ほぼなしカジュアルOK！
-            .Pr-box__text
-              あっとホーム環境◎
-            .Pr-box__text
-              引継ぎしっかり！
-            .Pr-box__text
-              引継ぎしっかり
+      .Pr-writes
+        .Pr-writes__title
+          PRポイント
+        .Pr-writes__box
+          .Pr-writes__box--text
+            残業ほぼなしカジュアルOK！
+          .Pr-writes__box--text
+            あっとホーム環境◎
+          .Pr-writes__box--text
+            引継ぎしっかり！
+          .Pr-writes__box--text
+            引継ぎしっかり
       .Button-wrapper
         = form.submit '掲載する', class: 'Button-wrapper__button'
 
