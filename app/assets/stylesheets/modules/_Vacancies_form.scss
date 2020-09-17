@@ -132,11 +132,13 @@
     }
     .View-top {
       background-color: gray;
-      width: 100%;
+      width: 270px;
       height: 150px;
       border-radius: 10px;
       &__img {
       object-fit: cover;
+      height: 150px;
+      width: 100%;
       }
     }
     .View-middle {
