@@ -14,9 +14,11 @@
 }
 
 .Open-wrapper {
+  padding-top: 10px;
   font-size: 30px;
-  height: 70px;
+  height: 100px;
   padding-left: 98px;
+  background-color: white;
 }
 
 .Job-admin {
@@ -88,15 +90,24 @@
 }
 
 .Button-wrapper {
-  margin-top: 40px;
+  margin: 40px 0 40px;
   &__button {
+    text-align: center;
+    background-color: gray;
+    width: 200px;
+    line-height: 50px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
   }
 }
 
 
-.Title {
+.Title-view {
   &__text {
     text-align: center;
+    font-size: 25px;
   }
 }
 

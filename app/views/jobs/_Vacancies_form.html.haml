@@ -74,12 +74,12 @@
             = form.text_field :pr2, placeholder: 'デニム・スニーカーOK！'
           .Pr-writes__box--text
             = form.text_field :pr3, placeholder: 'リーダーへの相談もできるので困りません！'
-
       .Button-wrapper
-        = form.submit '掲載する', class: 'Button-wrapper__button'
+        = form.submit '求人を掲載する', class: 'Button-wrapper__button'
 
-  .Title
-    .Title__text
+
+  .Title-view
+    .Title-view__text
       登録案件一覧
   %ul.Bottom-wrapper
     - @lists.each do |list|
