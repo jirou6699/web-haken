@@ -78,32 +78,32 @@
         = form.submit '求人を掲載する', class: 'Button-wrapper__button'
 
 
-  .Title-view
-    .Title-view__text
-      登録案件一覧
-  %ul.Bottom-wrapper
-    - @lists.each do |list|
-      %li.Contents
-        .Top-content
-          = image_tag list.image1.url, class: 'Top-content__img' if list.image1.present?
-        %table.Middle-content
-          %tr.Text-content
-            %td.Text-content__left
-              仕事内容
-            %td.Text-content__right
-              =list.title
-          %tr.Text-content
-            %td.Text-content__left
-              時給
-            %td.Text-content__right
-              =list.salary
-          %tr.Text-content
-            %td.Text-content__left
-              終業期間
-            %td.Text-content__right
-              =list.term
-        .Bottom-content
-          = link_to edit_job_path(list.id), class: "Bottom-Contents__btn", method: :get do
-            編集
-          = link_to job_path(list.id), class: "Bottom-Contents__btn", method: :delete do
-            削除
+    .Title-view
+      .Title-view__text
+        登録案件一覧
+    %ul.View-wrapper
+      - @lists.each do |list|
+        %li.View-contents
+          .View-top
+            = image_tag list.image1.url, class: 'View-top __img' if list.image1.present?
+          %table.View-middle
+            %tr.View-text
+              %td.View-text__left
+                仕事内容
+              %td.View-text__right
+                =list.title
+            %tr.View-middle
+              %td.View-text__left
+                時給
+              %td.View-text__right
+                =list.salary
+            %tr.View-middle
+              %td.View-text__left
+                終業期間
+              %td.View-text__right
+                =list.term
+          .View-bottom
+            = link_to edit_job_path(list.id), class: "View-bottom__btn", method: :get do
+              編集
+            = link_to job_path(list.id), class: "View-bottom__btn", method: :delete do
+              削除

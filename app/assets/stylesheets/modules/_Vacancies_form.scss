@@ -111,21 +111,21 @@
   }
 }
 
-.Bottom-wrapper {
+.View-wrapper {
   height: 470px;
   background-color: lightblue;
   margin: 0 auto;
-  width: 1200px;
+  width: 800px;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
   overflow-y: scroll;
-  .Contents {
+  .View-contents {
     height: 450px;
     width: 330px;
     background-color: gold;
     padding: 15px;
-    .Top-content {
+    .View-top {
       background-color: gray;
       width: 300px;
       height: 250px;
@@ -135,13 +135,13 @@
       width: 100%;
       }
     }
-    .Middle-content {
+    .View-middle {
       &__left {
       }
       &__right {
       }
     }
-    .Bottom-content {
+    .View-bottom {
       background-color: honeydew;
       width: auto;
       height: 90px;
