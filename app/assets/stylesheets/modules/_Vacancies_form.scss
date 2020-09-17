@@ -108,11 +108,13 @@
   &__text {
     text-align: center;
     font-size: 25px;
+    margin: 20px;
+    overflow-x: scroll;
   }
 }
 
 .View-wrapper {
-  height: 470px;
+  height: 460px;
   background-color: lightblue;
   margin: 0 auto;
   width: 800px;
@@ -123,12 +125,15 @@
   padding: 10px;
   .View-contents {
     border-radius: 10px;
-    height: 450px;
     width: 300px;
-    background-color: gold;
+    background-color: white;
+    border: 1px solid lightgray;
     padding: 15px;
     .View-title {
+      background-color: linen;
+      border-radius: 5px;
       margin-bottom: 10px;
+      padding: 3px;
     }
     .View-top {
       background-color: gray;
@@ -142,35 +147,43 @@
       }
     }
     .View-middle {
-      margin-top: 10px;
+      margin: 10px 0;
       width: 100%;
     }
     
     .View-text {
       border: 1px solid lightgray;
-      line-height: 30px;
+      height: 40px;
+      font-size: 13px;
       &__left {
         width: 30%;
+        padding-left:5px;
+        background-color: linen;
       }
       &__right {
-        padding-left: 20px;
+        padding-left: 5px;
         width: 70%;
+        overflow: visible;
       }
     }
 
     .View-bottom {
-      background-color: honeydew;
-      width: 100px;
-      // height: 90px;
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      &__button {
-        
-      }
-      &__like {
-        width: 60px;
-        height: 60px;
+      // background-color: honeydew;
+      font-size: 13px;
+      text-align: center;
+      position: relative;
+      &__box {
+        justify-content: space-evenly;
+        display: flex;
+        width: 100px;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        &--btn {
+          margin: 0 10px;
+          text-decoration: none;
+          color: grey;
+        } 
       }
     }
   }

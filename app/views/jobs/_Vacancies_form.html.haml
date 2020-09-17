@@ -14,9 +14,6 @@
           .Company-images__image--file
             = form.label :image1 do
               = form.file_field :image1
-
-
-
       .Vacancy
         .Write-title
           求人詳細を記入しましょう
@@ -110,7 +107,8 @@
               %td.View-text__right
                 =list.term
           .View-bottom
-            = link_to edit_job_path(list.id), class: "View-bottom__btn", method: :get do
-              編集
-            = link_to job_path(list.id), class: "View-bottom__btn", method: :delete do
-              削除
+            .View-bottom__box
+              = link_to edit_job_path(list.id), class: "View-bottom__box--btn", method: :get do
+                編集
+              = link_to job_path(list.id), class: "View-bottom__box--btn", method: :delete do
+                削除
