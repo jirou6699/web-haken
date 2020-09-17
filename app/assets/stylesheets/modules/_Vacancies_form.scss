@@ -10,11 +10,11 @@
 
 .Wrapper {
   max-width: 800px;
-
+  
 }
 
 .Open-wrapper {
-  padding-top: 10px;
+  padding-top: 30px;
   font-size: 30px;
   height: 100px;
   padding-left: 98px;
@@ -22,6 +22,7 @@
 }
 
 .Job-admin {
+  padding: 20px 0px;
   &__title{
     margin-bottom: 5px;
     font-size: 25px;
@@ -129,62 +130,66 @@
     background-color: white;
     border: 1px solid lightgray;
     padding: 15px;
-    .View-title {
-      background-color: linen;
-      border-radius: 5px;
-      margin-bottom: 10px;
-      padding: 3px;
-    }
-    .View-top {
-      background-color: gray;
-      width: 270px;
-      height: 150px;
-      border-radius: 10px;
-      &__img {
-      object-fit: cover;
-      height: 150px;
-      width: 100%;
-      }
-    }
-    .View-middle {
-      margin: 10px 0;
-      width: 100%;
-    }
-    
-    .View-text {
-      border: 1px solid lightgray;
-      height: 40px;
-      font-size: 13px;
-      &__left {
-        width: 30%;
-        padding-left:5px;
-        background-color: linen;
-      }
-      &__right {
-        padding-left: 5px;
-        width: 70%;
-        overflow: visible;
-      }
-    }
+  }
+}
 
-    .View-bottom {
-      // background-color: honeydew;
-      font-size: 13px;
-      text-align: center;
-      position: relative;
-      &__box {
-        justify-content: space-evenly;
-        display: flex;
-        width: 100px;
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        &--btn {
-          margin: 0 10px;
-          text-decoration: none;
-          color: grey;
-        } 
-      }
-    }
+.View-title {
+  background-color: linen;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 3px;
+}
+
+.View-top {
+  background-color: gray;
+  width: 270px;
+  height: 150px;
+  &__image {
+  border-radius: 10px;
+  display: block;
+  height: 150px;
+  object-fit: cover;
+  width: 100%;
+  }
+}
+
+.View-middle {
+  margin: 10px 0;
+  width: 100%;
+}
+
+.View-text {
+  border: 1px solid lightgray;
+  height: 40px;
+  font-size: 13px;
+  &__left {
+    width: 30%;
+    padding-left:5px;
+    background-color: linen;
+  }
+  &__right {
+    padding-left: 5px;
+    width: 70%;
+    overflow: visible;
+  }
+}
+
+.View-bottom {
+  // background-color: honeydew;
+  font-size: 13px;
+  text-align: center;
+  position: relative;
+  &__box {
+    justify-content: space-evenly;
+    display: flex;
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    &--btn {
+      margin: 0 10px;
+      text-decoration: none;
+      color: grey;
+    } 
   }
 }
