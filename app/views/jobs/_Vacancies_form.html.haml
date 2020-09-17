@@ -84,20 +84,27 @@
     %ul.View-wrapper
       - @lists.each do |list|
         %li.View-contents
+          .View-title
+            =list.title
           .View-top
             = image_tag list.image1.url, class: 'View-top __img' if list.image1.present?
           %table.View-middle
             %tr.View-text
               %td.View-text__left
-                仕事内容
+                職種
               %td.View-text__right
-                =list.title
-            %tr.View-middle
+                =list.occupation
+            %tr.View-text
               %td.View-text__left
                 時給
               %td.View-text__right
                 =list.salary
-            %tr.View-middle
+            %tr.View-text
+              %td.View-text__left
+                勤務地
+              %td.View-text__right
+                =list.description
+            %tr.View-text
               %td.View-text__left
                 終業期間
               %td.View-text__right
