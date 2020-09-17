@@ -28,12 +28,12 @@
     &--title {
     }
   }
+  input[type="text"] {
+    width: 500px;
+    height: 50px;
+  }
 }
 
-input[type="text"] {
-  width: 500px;
-  height: 50px;
-}
 
 .Company-images {
   margin-top: 20px;
@@ -72,14 +72,23 @@ input[type="text"] {
 
 .Pr-writes {
   margin-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid white;
   &__title {
     font-size: 25px;
-
+  }
+  &__text {
+    margin: 10px 0;
+  }
+  &__box {
+    &--text {
+      margin-bottom: 10px;
+    }
   }
 }
+
 .Button-wrapper {
-  // background-color: forestgreen;
-  text-align: center;
+  margin-top: 40px;
   &__button {
   }
 }

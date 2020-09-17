@@ -6,7 +6,7 @@
       .Job-admin__title
         仕事のタイトルを入力しましょう
       .Job-admin__text
-        = form.text_field :title, class: 'Job-admin__text--title', placeholder: 'ここに文章を入力してください'
+        = form.text_field :title, class: 'Job-admin__text--title', placeholder: '超大手！時給アップも見込める◎'
       .Company-images
         .Company-images__text
           写真を掲載しましょう
@@ -25,55 +25,56 @@
             .Vacancy-writes__left
               職種
             .Vacancy-writes__right
-              = form.text_field :occupation, class: "Vacancy-writes__right", placeholder: '営業事務'
+              = form.text_field :occupation, class: "Vacancy-writes__right", placeholder: '営業事務・貿易事務'
           .Vacancy-writes
             .Vacancy-writes__left
               勤務地
             .Vacancy-writes__right
-              = form.text_field :description, placeholder: 'ここに文章を入力してください'
+              = form.text_field :description, placeholder: '東京都　品川区'
           .Vacancy-writes
             .Vacancy-writes__left
               給与
             .Vacancy-writes__right
-              = form.text_field :salary, placeholder: 'ここに文章を入力してください'
+              = form.text_field :salary, placeholder: '時給1500円〜'
           .Vacancy-writes
             .Vacancy-writes__left
               アクセス
             .Vacancy-writes__right
-              = form.text_field :access, placeholder: 'ここに文章を入力してください'
+              = form.text_field :access, placeholder: '各線　品川駅　徒歩　10分'
           .Vacancy-writes
             .Vacancy-writes__left
               勤務時間
             .Vacancy-writes__right
-              = form.text_field :time, placeholder: 'ここに文章を入力してください'
+              = form.text_field :time, placeholder: '平日　09:00〜18:00'
           .Vacancy-writes
             .Vacancy-writes__left
               曜日・日数
             .Vacancy-writes__right
-              = form.text_field :week, placeholder: 'ここに文章を入力してください'
+              = form.text_field :week, placeholder: '平日（月曜〜金曜）土・祝日・日は休み'
           .Vacancy-writes
             .Vacancy-writes__left
               募集人数
             .Vacancy-writes__right
-              = form.text_field :emplyee, placeholder: 'ここに文章を入力してください'
+              = form.text_field :emplyee, placeholder: '３人'
           .Vacancy-writes
             .Vacancy-writes__left
               契約期間
             .Vacancy-writes__right
-              = form.text_field :term, placeholder: 'ここに文章を入力してください'
+              = form.text_field :term, placeholder: '長期'
         
       .Pr-writes
         .Pr-writes__title
           PRポイント
+        .Pr-writes__text
+          職場の良さを３つアピールしましょう！
         .Pr-writes__box
           .Pr-writes__box--text
-            残業ほぼなしカジュアルOK！
+            = form.text_field :pr1, placeholder: 'キレイオフィス！'
           .Pr-writes__box--text
-            あっとホーム環境◎
+            = form.text_field :pr2, placeholder: 'デニム・スニーカーOK！'
           .Pr-writes__box--text
-            引継ぎしっかり！
-          .Pr-writes__box--text
-            引継ぎしっかり
+            = form.text_field :pr3, placeholder: 'リーダーへの相談もできるので困りません！'
+
       .Button-wrapper
         = form.submit '掲載する', class: 'Button-wrapper__button'
 
