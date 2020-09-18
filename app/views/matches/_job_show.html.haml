@@ -122,7 +122,7 @@
     .Review-wrapper__review
       感想を教えて！
     
-    =form_with model: [match, review], html: {class: ""}, local: true do |form|
+    =form_with model: [match, review], id: "new-comment", local: true do |form|
       .Review-wrapper__form
         .Review-post
           .Review-box
