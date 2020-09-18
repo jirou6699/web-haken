@@ -1,7 +1,10 @@
 class ReviewsController < ApplicationController
   def create
-    review = Review.create(review_params)
-    redirect_to "/matches/#{review.job_id}.reviews"
+    @review = Review.create(review_params)
+    respond_to do |format|
+      format.html { redirect_to "/matches/#{review.job_id}.reviews" }
+      format.json
+    end
   end
 
   def destroy
