@@ -9,7 +9,7 @@
         = form.text_field :title, class: 'Job-admin__text--title', placeholder: '超大手！時給アップも見込める◎'
       .Company-images
         .Company-images__text
-          写真を掲載しましょう
+          写真を掲載しましょう(５つ選択してください。)
         .Company-images__image
           .Company-images__image--file
             = form.label :image1 do
@@ -84,7 +84,7 @@
           .View-title
             =list.title
           .View-top
-            = image_tag list.image1.url, class: 'View-top__image' if list.image1.present?
+            = image_tag list.image1.url, class: 'View-top__image1' if list.image1.present?
           %table.View-middle
             %tr.View-text
               %td.View-text__left

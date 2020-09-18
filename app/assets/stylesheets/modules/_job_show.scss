@@ -50,9 +50,14 @@
     border-radius: 5px;
     margin-top: 10px;
     .Pr-title {
+      padding: 5px 5px;
+      color: red;
     }
     .Pr-box {
-      padding: 5px 0;
+      padding: 5px 20px;
+      &__text {
+
+      }
     }
   }
   .Image-contents {
@@ -77,6 +82,8 @@
       &__list {
         border-radius: 10px;
         background-color: gray;
+        height: 142px;
+        // width: ;
       }
     }
   }
@@ -115,6 +122,7 @@
 .Review-wrapper {
   margin-top: 30px;
   &__title {
+    background-color: lightgoldenrodyellow;
     height: 300px;
     overflow: scroll;
   }
@@ -132,10 +140,14 @@
   &__form {
     height: 300px;
     padding: 15px;
-    background-color: gainsboro;
+    background-color: linen;
   }
 }
 
+.Review-post {
+  padding: 10px;
+  background-color:linen;
+}
 .Review-box {
   // background-color: oldlace;
   &__good {
@@ -147,6 +159,8 @@
     border-radius: 5px;
   }
 }
+
+
 .Review-button {
   width: 100%;
   text-align: center;

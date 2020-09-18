@@ -18,24 +18,24 @@
           ここがポイント！
         .Pr-box
           .Pr-box__text
-            テストテストテストテストテストテストテストテスト
+            = match.pr1
           .Pr-box__text
-            テストテストテストテストテストテストテストテスト
+            = match.pr2
           .Pr-box__text
-            テストテストテストテストテストテストテストテスト
+            = match.pr3
 
       .Image-contents
         %ul.Job-images
           %li.Job-images__list1
             = image_tag match.image1.url, class: 'Job-images__list1--img' if match.image1.present?
           %li.Job-images__list
-            2
+            = image_tag match.image2.url, class: 'Job-images__list1--img' if match.image2.present?
           %li.Job-images__list
-            3
+            = image_tag match.image3.url, class: 'Job-images__list1--img' if match.image3.present?
           %li.Job-images__list
-            4
+            = image_tag match.image4.url, class: 'Job-images__list1--img' if match.image4.present?
           %li.Job-images__list
-            5
+            = image_tag match.image5.url, class: 'Job-images__list1--img' if match.image5.present?
       .Vacancy-contents
         %table.Vacancy-infos
           %tr.Vacancy-item
@@ -111,7 +111,7 @@
                 .Review-infomation__left--good
                 【わるかった点】
                 .Review-infomation__left--text
-                  =review.good
+                  =review.bad
               .Review-infomation__right
                 .Review-infomation__right--destroy
                   = link_to job_review_path(review.job.id, review.id), method: :delete do

@@ -10,6 +10,7 @@
 
 .Wrapper {
   max-width: 800px;
+  padding-bottom: 10px;
   
 }
 
@@ -44,7 +45,12 @@
   border-bottom: 1px solid white;
   &__text{
     font-size: 25px;
-    margin-top: 5px;
+    margin: 5px 0px;
+  }
+  &__image{
+    &--file {
+      margin: 15px 0px;
+    }
   }
 }
 
@@ -141,13 +147,14 @@
   margin-bottom: 10px;
   padding: 3px;
   height: 55px;
+  overflow-x: scroll;
 }
 
 .View-top {
   background-color: gray;
   width: 270px;
   height: 150px;
-  &__image {
+  &__image1 {
   border-radius: 10px;
   display: block;
   height: 150px;
