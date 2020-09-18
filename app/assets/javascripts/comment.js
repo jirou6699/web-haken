@@ -15,19 +15,19 @@ $(function () {
             ${comment.created_at}
           </div>
         </div>
-          <div class="Review-infomation">
-            <div class="Review-infomation__left">
-              <div class="Review-infomation__left--good"></div>
-                【よかった点】
-              <div class="Review-infomation__left--text">
-                ${comment.good}
-              </div>
-              <div class="Review-infomation__left--good"></div>
-                【わるかった点】
-              <div class="Review-infomation__left--text">
-                ${comment.bad}
-              </div>
+        <div class="Review-infomation">
+          <div class="Review-infomation__left">
+            <div class="Review-infomation__left--good"></div>
+              【よかった点】
+            <div class="Review-infomation__left--text">
+              ${comment.good}
             </div>
+            <div class="Review-infomation__left--good"></div>
+              【わるかった点】
+            <div class="Review-infomation__left--text">
+              ${comment.bad}
+            </div>
+          </div>
           <div class="Review-infomation__right">
             <div class="Review-infomation__right--destroy">
               <a rel="nofollow" data-method="delete" href="/jobs/2/reviews/1"><i class="far fa-trash-alt Review-infomation__right--trash"></i></a>
@@ -54,7 +54,7 @@ $(function () {
     .done(function (data) {
       let html = buildHTML(data);
       console.log(html)
-      $('.Review-wrapper').append(html);
+      $('.Review-wrapper__title').append(html);
       $('#new-comment')[0].reset();
       $('.Review-button__submit').prop('disabled', false);
     })
