@@ -51,11 +51,12 @@ $(function () {
       processData: false,
       contentType: false
     })
-      .done(function (data) {
-        let html = buildHTML(data);
-        console.log(html)
-        $('.Review-wrapper').append(html);
-        // $('form')[0].reset();
+    .done(function (data) {
+      let html = buildHTML(data);
+      console.log(html)
+      $('.Review-wrapper').append(html);
+      $('#new-comment')[0].reset();
+      $('.Review-button__submit').prop('disabled', false);
     })
   })
 });
