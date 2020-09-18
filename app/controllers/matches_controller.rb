@@ -2,13 +2,13 @@ class MatchesController < ApplicationController
   before_action :move_to_index, except: [:index]
   
   def index
-    @matches = Job.all
+    @matches = Job.all.order("created_at DESC")
   end
 
   def show
     @match = Job.find(params[:id])
     @review = Review.new
-    @reviews = @match.reviews.includes(:user)
+    @reviews = @match.reviews.includes(:user).order("created_at DESC")
   end
 
   def search
