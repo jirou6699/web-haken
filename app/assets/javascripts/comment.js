@@ -14,7 +14,7 @@ $(function () {
           <div class="Review-time">
             ${comment.created_at}
           </div>
-          </div>
+        </div>
           <div class="Review-infomation">
             <div class="Review-infomation__left">
               <div class="Review-infomation__left--good"></div>
