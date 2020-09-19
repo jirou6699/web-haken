@@ -4,9 +4,9 @@ $(function () {
       `<div class="Review-wrapper__list">
         <div class="Review-top">
           <div class="Review-icons">
-            // <div class="Reiview-icons__face">
-            //   <img class="Review-icons__face--image" src = "${json.image.url}">
-            // </div>
+            <div class="Review-icons__face">
+              <img class="Review-icons__face--image" src = "${comment.image}">
+            </div>
             <div class="Review-icons__nickname">
               ${comment.user_name}
             </div>
@@ -28,11 +28,11 @@ $(function () {
               ${comment.bad}
             </div>
           </div>
-          // <div class="Review-infomation__right">
-          //   <div class="Review-infomation__right--destroy">
-          //     <a rel="nofollow" data-method="delete" href="/jobs/2/reviews/1"><i class="far fa-trash-alt Review-infomation__right--trash"></i></a>
-          //   </div>
-          // </div>
+          <div class="Review-infomation__right">
+            <div class="Review-infomation__right--destroy">
+              <a rel="nofollow" data-method="delete" href="/jobs/2/reviews/1"><i class="far fa-trash-alt Review-infomation__right--trash"></i></a>
+            </div>
+          </div>
         </div>
       </div>`
     return html;
