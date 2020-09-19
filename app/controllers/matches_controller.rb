@@ -8,7 +8,7 @@ class MatchesController < ApplicationController
   def show
     @match = Job.find(params[:id])
     @review = Review.new
-    @reviews = @match.reviews.includes(:user).order("created_at DESC")
+    @reviews = @match.reviews.includes(:user)
   end
 
   def search

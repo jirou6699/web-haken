@@ -109,6 +109,10 @@
   }
 }
 
+.Job-link {
+  text-decoration: none;
+  color: black;
+}
 
 
 .Job-box {
@@ -116,7 +120,14 @@
   background-color: white;
   padding: 15px;
   margin-bottom: 20px;
-  
+  position: relative;
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .Upper-job {
