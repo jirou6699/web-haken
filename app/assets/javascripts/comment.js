@@ -30,7 +30,7 @@ $(function () {
           </div>
           <div class="Review-infomation__right">
             <div class="Review-infomation__right--destroy">
-              <a rel="nofollow" data-method="delete" href="/jobs/2/reviews/1"><i class="far fa-trash-alt Review-infomation__right--trash"></i></a>
+              <a rel="nofollow" data-method="delete" href= "/jobs/${comment.job}/reviews/${comment.review_id}"><i class="far fa-trash-alt Review-infomation__right--trash"></i></a>
             </div>
           </div>
         </div>
