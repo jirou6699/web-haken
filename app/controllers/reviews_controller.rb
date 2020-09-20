@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.create(review_params)
     respond_to do |format|
-      format.html { redirect_to "/matches/#{review.job_id}.reviews" }
+      format.html { redirect_to "/matches/#{@review.job_id}.reviews" }
       format.json
     end
   end
@@ -11,7 +11,10 @@ class ReviewsController < ApplicationController
     review = Review.find_by(id: params[:id], job_id: params[:job_id])
     if review.present?
       review.destroy
-      redirect_to "/matches/#{review.job_id}.reviews"
+      respond_to do |format|
+        format.html { redirect_to "/matches/#{review.job_id}.reviews" }
+        format.json 
+      end
     end
   end
 

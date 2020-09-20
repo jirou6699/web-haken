@@ -38,7 +38,7 @@ $(function () {
     return html;
   }
 
-  $('#new-comment').on('submit', function(e){
+  $('#new-comment').on('submit', function (e) {
     e.preventDefault();
     console.log(this)
     let formData = new FormData(this);
@@ -59,30 +59,24 @@ $(function () {
       $('.Review-button__submit').prop('disabled', false);
     })
   })
-
-  $('.Review-wrapper__list').on('click', ".Review-infomation__right--trash", function(e) {
-    e.preventDefault();
-    console.log(this)
-    // // stopPropagationがないとHTMLとJSONの
-    // // リクエストが同時に送られてしまう
-    // e.preventDefault();
-    // e.stopPropagation();
-
-    // //リンクに含まれるURLを取得する
-    // var url = $(this).attr('href');
-
-    // $.ajax({
-    //   url: url,
-    //   type: "DELETE",
-    //   dataType: 'json',
-    //   // CSRF tokenを発行する
-    //   beforeSend: function (xhr) { xhr.setRequestHeader("X-CSRF-Token", $('meta[name="csrf-token"]').attr('content')) }
-    // })
+  
+  $(function () {
+    $('.Review-wrapper__list').on('click', ".Review-infomation__right--trash", function (e) {
+      console.log(this)
+    //   let url = $(this).attr('href');
+    //   $.ajax({https://atcoder.jp/?lang=ja
+    //     url: url,
+    //     type: "DELETE",
+    //     dataType: 'json',
+    //     // CSRF tokenを発行する
+    //     beforeSend: function (xhr) { xhr.setRequestHeader("X-CSRF-Token", $('meta[name="csrf-token"]').attr('content')) }
+    //   })
     //   .done(function (data) {
     //     成功した時
     //   })
     //   .fail(function () {
     //     失敗した時
     //   })
-  })
+    })
+  });
 });
