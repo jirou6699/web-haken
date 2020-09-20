@@ -58,25 +58,5 @@ $(function () {
       $('#new-comment')[0].reset();
       $('.Review-button__submit').prop('disabled', false);
     })
-  })
-  
-  $(function () {
-    $('.Review-wrapper__list').on('click', ".Review-infomation__right--trash", function (e) {
-      console.log(this)
-    //   let url = $(this).attr('href');
-    //   $.ajax({https://atcoder.jp/?lang=ja
-    //     url: url,
-    //     type: "DELETE",
-    //     dataType: 'json',
-    //     // CSRF tokenを発行する
-    //     beforeSend: function (xhr) { xhr.setRequestHeader("X-CSRF-Token", $('meta[name="csrf-token"]').attr('content')) }
-    //   })
-    //   .done(function (data) {
-    //     成功した時
-    //   })
-    //   .fail(function () {
-    //     失敗した時
-    //   })
-    })
-  });
+  })  
 });

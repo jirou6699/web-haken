@@ -8,12 +8,12 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    review = Review.find_by(id: params[:id], job_id: params[:job_id])
-    if review.present?
-      review.destroy
-      respond_to do |format|
-        format.html { redirect_to "/matches/#{review.job_id}.reviews" }
-        format.json 
+    @review = Review.find_by(id: params[:id], job_id: params[:job_id])
+    respond_to do |format|
+      if @review.present?
+        @review.destroy
+        format.html { redirect_to "/matches/#{@review.job_id}.reviews" }
+        format.json { render json: { id: params[:id], job_id: params[:job_id]} }
       end
     end
   end
