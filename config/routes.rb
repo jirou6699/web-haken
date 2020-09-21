@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     end 
   end
   resources :jobs, only: [:index, :new, :create, :destroy, :edit, :update] do
+    resource :favorites, only: [:create, :destroy]
     resources :reviews, only: [:create, :destroy]
   end
 end
