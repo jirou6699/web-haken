@@ -68,14 +68,14 @@
                     =match.title
                 .Job-catch__box
                   .Job-catch_box--star
-                    -if current_user.already_favorited?(match) 
+                    -if user_signed_in? && current_user.already_favorited?(match) 
                       = link_to job_favorites_path(match), method: :delete do
-                        いいねをはずす
-                        -# = icon('far', 'star')
+                        = icon('fas', 'star')
                         -# 気になる！
                     - else
                       = link_to job_favorites_path(match), method: :post do
-                        いいねする
+                        = icon('fa', 'star')
+                        -# いいねする
                     = match.favorites.count
               .Contents
                 .Content-left
