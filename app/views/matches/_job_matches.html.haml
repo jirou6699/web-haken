@@ -67,9 +67,10 @@
                   .Job-catch__textarea--text
                     =match.title
                 .Job-catch__box
-                  .Job-catch_box--star
-                    = icon('far', 'star')
-                    気になる！
+                  - if current_user.already_favorited?(match)
+                    .Job-catch_box--star
+                      = icon('far', 'star')
+                      気になる！
               .Contents
                 .Content-left
                   = image_tag match.image1.url, class: 'Content-left__img' if match.image1.present?
