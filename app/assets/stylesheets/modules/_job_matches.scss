@@ -155,7 +155,7 @@
   display: flex;
   padding: 5px;
   &__textarea {
-    width: 70%;
+    width: 80%;
     height: 60px;
     display: table;
     &--text {
@@ -164,11 +164,18 @@
     }
   }
   &__box {
-    width: 30%;
+    width: 20%;
     font-size: 15px;
-    text-align: right;
     line-height: 60px;
+    display: flex;
     &--star {
+      font-size: 18px;
+      &--color {
+        color: gold;
+      }
+    }
+    &--text {
+      margin-left: 10px;
     }
   }
 }
