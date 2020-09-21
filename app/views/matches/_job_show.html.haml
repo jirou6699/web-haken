@@ -32,10 +32,10 @@
             = image_tag match.image2.url, class: 'Job-images__list1--img' if match.image2.present?
           %li.Job-images__list
             = image_tag match.image3.url, class: 'Job-images__list1--img' if match.image3.present?
-          %li.Job-images__list
-            = image_tag match.image4.url, class: 'Job-images__list1--img' if match.image4.present?
-          %li.Job-images__list
-            = image_tag match.image5.url, class: 'Job-images__list1--img' if match.image5.present?
+          -# %li.Job-images__list
+          -#   = image_tag match.image4.url, class: 'Job-images__list1--img' if match.image4.present?
+          -# %li.Job-images__list
+          -#   = image_tag match.image5.url, class: 'Job-images__list1--img' if match.image5.present?
       .Vacancy-contents
         %table.Vacancy-infos
           %tr.Vacancy-item
