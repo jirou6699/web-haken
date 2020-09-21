@@ -8,6 +8,8 @@ class User < ApplicationRecord
   
   validates :name, presence: true, uniqueness: true
   validates :nickname, presence: true, uniqueness: true
-
   mount_uploader :image, ImageUploader
+
+  has_many :favorites, dependent: :destroy
+  
 end
