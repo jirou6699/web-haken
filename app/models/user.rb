@@ -12,7 +12,7 @@ class User < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
 
-  def already_favorited?(recipe)
-    self.favorites.existes?(recipe_id: recipe.id)
+  def already_favorited?(job)
+    self.favorites.exists?(job_id: job.id)
   end
 end

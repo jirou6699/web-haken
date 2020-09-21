@@ -67,10 +67,16 @@
                   .Job-catch__textarea--text
                     =match.title
                 .Job-catch__box
-                  - if current_user.already_favorited?(match)
-                    .Job-catch_box--star
-                      = icon('far', 'star')
-                      気になる！
+                  .Job-catch_box--star
+                    -if current_user.already_favorited?(match) 
+                      = link_to job_favorites_path(match), method: :delete do
+                        いいねをはずす
+                        -# = icon('far', 'star')
+                        -# 気になる！
+                    - else
+                      = link_to job_favorites_path(match), method: :post do
+                        いいねする
+                    = match.favorites.count
               .Contents
                 .Content-left
                   = image_tag match.image1.url, class: 'Content-left__img' if match.image1.present?
