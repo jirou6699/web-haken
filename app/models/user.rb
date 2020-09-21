@@ -11,5 +11,8 @@ class User < ApplicationRecord
   mount_uploader :image, ImageUploader
 
   has_many :favorites, dependent: :destroy
-  
+
+  def already_favorited?(recipe)
+    self.favorites.existes?(recipe_id: recipe.id)
+  end
 end
