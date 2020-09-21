@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(version: 2020_09_21_025036) do
     t.string "image1", null: false
     t.string "image2", null: false
     t.string "image3", null: false
-    t.string "image4", null: false
-    t.string "image5", null: false
     t.text "description", null: false
     t.string "salary", null: false
     t.text "access", null: false
