@@ -66,16 +66,16 @@
                 .Job-catch__textarea--text
                   =match.title
               .Job-catch__box
-                .Job-catch_box--star
+                .Job-catch__box--star
                   -if user_signed_in? && current_user.already_favorited?(match) 
                     = link_to job_favorites_path(match), method: :delete do
-                      = icon('fas', 'star')
-                      -# 気になる！
+                      = icon('far', 'star')
                   - else
                     = link_to job_favorites_path(match), method: :post do
-                      = icon('far', 'star')
-                      -# いいねする
-                  = match.favorites.count
+                      = icon('fas', 'star', class: "Job-catch__box--star--color")
+                .Job-catch__box--text
+                  気になる!
+                  -# = match.favorites.count
             .Contents
               %a{ href: match_path(match.id), class: "Contents__link" } 
               .Content-left
