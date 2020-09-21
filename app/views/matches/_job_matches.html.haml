@@ -55,54 +55,54 @@
           ページネーションが入ります。
       .Bar-left__middle
         - matches.each do |match|
-          %a{ href: match_path(match.id), class: "Job-link" } 
-            .Job-box
-              .Upper-job
-                .Upper-job__new
-                  NEW
-                .Upper-job__no
-                  job.no eeeeeeee
-              .Job-catch
-                .Job-catch__textarea
-                  .Job-catch__textarea--text
-                    =match.title
-                .Job-catch__box
-                  .Job-catch_box--star
-                    -if user_signed_in? && current_user.already_favorited?(match) 
-                      = link_to job_favorites_path(match), method: :delete do
-                        = icon('fas', 'star')
-                        -# 気になる！
-                    - else
-                      = link_to job_favorites_path(match), method: :post do
-                        = icon('fa', 'star')
-                        -# いいねする
-                    = match.favorites.count
-              .Contents
-                .Content-left
-                  = image_tag match.image1.url, class: 'Content-left__img' if match.image1.present?
-                .Content-right
-                  .Text-content
-                    .Text-content__left
-                      = icon('far', 'file-alt')
-                    .Text-content__right
-                      =match.occupation
-                  .Text-content
-                    .Text-content__left
-                      = icon('fas', 'yen-sign')
-                    .Text-content__right
-                      =match.salary
-                  .Text-content
-                    .Text-content__left
-                      = icon('far', 'calendar-alt')
-                    .Text-content__right
-                      =match.term
-                  .Text-content
-                    .Text-content__left
-                      = icon('fas', 'map-marker-alt')
-                    .Text-content__rightlong
-                      =match.access
-            -# = link_to match_path(match.id), class: Job-box__link do
-            -#  編集
+          .Job-box
+            .Upper-job
+              .Upper-job__new
+                NEW
+              .Upper-job__no
+                job.no eeeeeeee
+            .Job-catch
+              .Job-catch__textarea
+                .Job-catch__textarea--text
+                  =match.title
+              .Job-catch__box
+                .Job-catch_box--star
+                  -if user_signed_in? && current_user.already_favorited?(match) 
+                    = link_to job_favorites_path(match), method: :delete do
+                      = icon('fas', 'star')
+                      -# 気になる！
+                  - else
+                    = link_to job_favorites_path(match), method: :post do
+                      = icon('fa', 'star')
+                      -# いいねする
+                  = match.favorites.count
+            .Contents
+              %a{ href: match_path(match.id), class: "Contents__link" } 
+              .Content-left
+                = image_tag match.image1.url, class: 'Content-left__img' if match.image1.present?
+              .Content-right
+                .Text-content
+                  .Text-content__left
+                    = icon('far', 'file-alt')
+                  .Text-content__right
+                    =match.occupation
+                .Text-content
+                  .Text-content__left
+                    = icon('fas', 'yen-sign')
+                  .Text-content__right
+                    =match.salary
+                .Text-content
+                  .Text-content__left
+                    = icon('far', 'calendar-alt')
+                  .Text-content__right
+                    =match.term
+                .Text-content
+                  .Text-content__left
+                    = icon('fas', 'map-marker-alt')
+                  .Text-content__rightlong
+                    =match.access
+          -# = link_to match_path(match.id), class: Job-box__link do
+          -#  編集
 
     .Bar-right
       .Search-wrapper
