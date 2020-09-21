@@ -12,10 +12,21 @@
 
 ActiveRecord::Schema.define(version: 2020_09_11_063401) do
 
+  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "job_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "title", null: false
     t.string "occupation", null: false
     t.string "image1", null: false
+    t.string "image2", null: false
+    t.string "image3", null: false
+    t.string "image4", null: false
+    t.string "image5", null: false
     t.text "description", null: false
     t.string "salary", null: false
     t.text "access", null: false
@@ -23,6 +34,9 @@ ActiveRecord::Schema.define(version: 2020_09_11_063401) do
     t.string "week", null: false
     t.string "emplyee", null: false
     t.string "term", null: false
+    t.string "pr1", null: false
+    t.string "pr2", null: false
+    t.string "pr3", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
