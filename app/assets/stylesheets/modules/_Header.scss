@@ -5,7 +5,7 @@
   // background-color: aqua;
   display: flex;
   .Header-logo {
-    width: 50%;
+    width: 60%;
     &__image {
       line-height: 80px;
       &--pic {
@@ -14,7 +14,7 @@
     }
   }
   .Header-right{
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -29,16 +29,21 @@
       border-radius: 100%;
       object-fit: cover;
       width: 100%;
+      }
     }
-  }
-  &__company {
-    font-size: 16px;
+    &__company {
+      font-size: 13px;
+      &--icon {
+        text-decoration: none;
+        color: black;
+      }
     }
-    &__signup {
-      font-size: 16px;
-    }
-    &__logout {
-      font-size: 16px;
+    &__devise {
+      font-size: 13px;
+      &--icon {
+        text-decoration: none;
+        color: black;
+      }
     }
   }
 }

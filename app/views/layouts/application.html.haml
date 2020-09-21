@@ -18,25 +18,21 @@
         .Header-right__img
           = image_tag current_user.image.to_s, class: 'Header-right__img--file'
         .Header-right__company
-          = link_to jobs_path do
-            .Header-right__company--building
-              = icon('far', 'building')
-              企業担当者はこちら
-        .Header-right__logout
-          = link_to destroy_user_session_path, method: :delete do
-            .Header-right__logout--sign-out-alt
-              = icon('fas', 'sign-out-alt')
-              サインアウト
+          = link_to jobs_path, class: "Header-right__company--icon" do
+            = icon('far', 'building')
+            企業担当者はこちら
+        .Header-right__devise
+          = link_to destroy_user_session_path, class:"Header-right__devise--icon", method: :delete do
+            = icon('fas', 'sign-out-alt')
+            サインアウト
       - else
         .Header-right__company
-          = link_to jobs_path do
-            .Header-right__company--building
-              = icon('far', 'building')
-              企業担当者はこちら
-        .Header-right__signup
-          = link_to new_user_registration_path do
-            .Header-right__signup--sign-in-alt
-              = icon('fas', 'sign-in-alt')
-              サインイン
+          = link_to jobs_path, class: "Header-right__company--icon" do
+            = icon('far', 'building')
+            企業担当者はこちら
+        .Header-right__devise
+          = link_to new_user_registration_path, class:"Header-right__devise--icon" do
+            = icon('fas', 'sign-in-alt')
+            サインイン
   = yield
   .Footer
