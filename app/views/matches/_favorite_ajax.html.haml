@@ -1,0 +1,7 @@
+.Job-catch__box--star
+  -if current_user.already_favorited?(match) 
+    = link_to job_favorites_path(match), method: :delete, remote: true do
+      = icon('fas', 'star', class: "Job-catch__box--star--color")
+  - else
+    = link_to job_favorites_path(match), method: :post, remote: true do
+      = icon('far', 'star')
