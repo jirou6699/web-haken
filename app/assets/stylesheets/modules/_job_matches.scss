@@ -9,7 +9,6 @@
 }
 
 .Top-wrapper {
-  // background-color: rebeccapurple;
   position: relative;
   padding: 5px;
   .Top-images {
@@ -17,7 +16,7 @@
       grid-gap: 1rem;
       grid-template-columns: 2fr 1fr 1fr;
       &__image1 {
-        background-color: gray;
+        // background-color: gray;
         grid-row: 1 / span 2;
         height: 400px;
         &--img {            //実際の画像をいれる//
@@ -29,7 +28,7 @@
       }
       &__image2 {
         grid-column:2 /span 2 ;
-        background-color: gray;
+        // background-color: gray;
         height: 180px;
         &--img {            //実際の画像をいれる//
           height: 180px;
@@ -41,7 +40,7 @@
         }
       }
       &__image {
-        background-color: gray;
+        // background-color: gray;
         height: 204px;
          &--img {            //実際の画像をいれる//
           height: 204px;
@@ -64,23 +63,37 @@
 
 
 .Info-wrapper {
-  // height: 200px;
-  margin-top: 20px;
-  background-color: burlywood;
+  background-color: ivory;
+  border-radius: 10px;
+  margin: 30px 0;
+  padding: 5px 0;
   display: flex;
   .Title {
-    background-color: gainsboro;
-    // height: 200px;
     width: 20%;
+    font-size: 20px;
+    display: flex;
+    &__icon {
+      &--color {
+        margin-right: 10px;
+        color: lightcoral;
+      }
+    }
+    &__text {
+    }
   }
   .Message-lists{
     &__box {
       display: flex;
+      margin-bottom: 10px;
       &--date {
         margin-left: 20px;
       }
       &--message {
         margin-left: 30px;
+        &--color {
+          text-decoration: none;
+          color: black;
+        }
       }
     }
   }
@@ -159,7 +172,7 @@
   display: flex;
   padding: 5px;
   &__textarea {
-    width: 84%;
+    width: 80%;
     height: 60px;
     display: table;
     &--text {
@@ -168,10 +181,11 @@
     }
   }
   &__box {
-    width: 16%;
+    width: 20%;
     font-size: 15px;
     line-height: 60px;
     display: flex;
+    padding-left: 20px;
     &--star {
       font-size: 17px;
       text-decoration: none;

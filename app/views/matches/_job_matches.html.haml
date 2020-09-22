@@ -15,11 +15,14 @@
 
   .Info-wrapper
     .Title
-      新着情報
+      .Title__icon
+        =icon('fas','info-circle', class: 'Title__icon--color')
+      .Title__text
+        お知らせ
     .Message-lists
       .Message-lists__box
         .Message-lists__box--date
-          2020/08/24
+          2020/09/24
         .Message-lists__box--message
           キャプションキャプションキャプションキャプションキャプション
       .Message-lists__box
@@ -29,14 +32,15 @@
           キャプションキャプションキャプションキャプションキャプション
       .Message-lists__box
         .Message-lists__box--date
-          2020/08/24
+          2020/07/24
         .Message-lists__box--message
           キャプションキャプションキャプションキャプションキャプション
       .Message-lists__box
         .Message-lists__box--date
-          2020/08/24
+          2020/04/01
         .Message-lists__box--message
-          キャプションキャプションキャプションキャプションキャプション
+          = link_to "https://www.neo-career.co.jp/humanresource/knowhow/c-content-parttime-douitutinkinn-190604/", class: "Message-lists__box--message--color" do
+            「同一労働・同一賃金」が派遣社員にもたらす影響とは？
    
   .Under-info
     .Under-info__icon
@@ -65,12 +69,12 @@
                   =match.title
               .Job-catch__box
                 .Job-catch__box--star
-                  -if user_signed_in? && current_user.already_favorited?(match) 
+                  -if current_user.already_favorited?(match) 
                     = link_to job_favorites_path(match), method: :delete do
-                      = icon('far', 'star')
+                      = icon('fas', 'star', class: "Job-catch__box--star--color")
                   - else
                     = link_to job_favorites_path(match), method: :post do
-                      = icon('fas', 'star', class: "Job-catch__box--star--color")
+                      = icon('far', 'star')
                 .Job-catch__box--text
                   気になる!
                   -# = match.favorites.count
