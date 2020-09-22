@@ -1,5 +1,5 @@
 -if user_signed_in?
-  -if match.already_favorited?(current_user) 
+  -if current_user.already_favorited?(match) 
     = link_to job_favorites_path(match.id), method: :delete, remote: true do
       = icon('fas', 'star', class: "Job-catch__box--star--color")
   - else
