@@ -1,14 +1,15 @@
 .Wrapper-match
   .Top-wrapper
-    %ul.Top-images
-      %li.Top-images__image1
-        = image_tag 'top1.jpg', class: 'Top-images__image1--img'
-      %li.Top-images__image2
-        = image_tag 'top2.jpg', class: 'Top-images__image2--img'
-      %li.Top-images__image  
-        = image_tag 'top3.jpg', class: 'Top-images__image--img'
-      %li.Top-images__image
-        = image_tag 'top4.jpg', class: 'Top-images__image--img'
+    .Top-images
+      %ul.slider
+        %li
+          = image_tag 'top1.jpg'
+        %li
+          = image_tag 'top2.jpg'
+        %li
+          = image_tag 'top3.jpg'
+        %li
+          = image_tag 'top4.jpg'
     .Top-login
       = link_to user_session_path, class: 'Top-login__text' do
         Login
