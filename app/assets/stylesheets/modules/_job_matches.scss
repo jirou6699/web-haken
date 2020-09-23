@@ -10,51 +10,53 @@
 
 .Top-wrapper {
   padding: 5px;
-  .slider {
-    max-width: 100%;
-    height: 450px;
-  }
-  .slick-slide img {
-    width: 100%;
-    height: 450px;
-    object-fit: cover;
-    border-radius: 10px;
-    
-  }
-  .slick-prev, .slick-next {
-    z-index: 1;
-  }
-  .slick-prev:before, .slick-next:before {
-      color: #000;
-  }
-  .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: .2;
-  }
-  .slick-active {
-      opacity: 1;
-  }
-  .slick-current {
-      opacity: 1;
-  }
-  .thumb {
-      margin: 20px 0 0;
-  }
-  .thumb .slick-slide {
-      cursor: pointer;
-  }
-  .thumb .slick-slide:hover {
-      opacity: .7;
-  }
- 
-  .Top-login{
-    position: absolute;
-    top:50%;
-    right:50%;
-    &__text {
-      color: seashell;
-    }
-  }
+}
+.slider {
+  max-width: 100%;
+  height: 450px;
+}
+.slick-slide img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  
+}
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+.slick-active {
+  opacity: 1;
+}
+.slick-current {
+  opacity: 1;
+}
+.thumb {
+  margin: 20px 0 0;
+}
+.thumb .slick-slide {
+  cursor: pointer;
+}
+.thumb .slick-slide:hover {
+  opacity: .7;
+}
+
+.Top-catchcopy{
+  position: absolute;
+  font-size: 30px;
+  font-weight: bold ;
+  color: white;
+  top:50%;
+  left:50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
 }
 
 
@@ -122,14 +124,13 @@
     &__middle {
       overflow-y: scroll;
       height: 1000px;
-      padding: 15px;
-      background-color: lightblue;
+      // background-color: lightblue;
     }
   }
   .Bar-right{
   width: 240px;
   height: 300px;
-  margin-left: 20px;
+  margin-left: 10px;
   border: 1px solid gainsboro;
   border-radius: 5px;
   padding: 10px;
@@ -141,6 +142,8 @@
   background-color: white;
   padding: 15px;
   margin-bottom: 20px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
 }
 
 .Upper-job {

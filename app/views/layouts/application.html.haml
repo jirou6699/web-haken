@@ -34,8 +34,26 @@
             = icon('far', 'building')
             企業担当者はこちら
         .Header-right__devise
+          = link_to user_session_path, class:"Header-right__devise--icon" do
+            = icon('fas', 'user')
+            ログイン
+        .Header-right__devise
           = link_to new_user_registration_path, class:"Header-right__devise--icon" do
             = icon('fas', 'sign-in-alt')
             サインイン
   = yield
   .Footer
+    .Footer-logo
+      = link_to root_path do
+        .Header-logo__image
+          = image_tag 'haken logo.png', class: "Header-logo__image--pic"
+    .Footer-right
+      .Footer-right__text
+        = link_to "#", class: "Footer-right__text--font" do
+          お問い合わせ
+      .Footer-right__text
+        = link_to "#", class: "Footer-right__text--center" do
+          プライバシーポリシー
+      .Footer-right__text
+        = link_to "#", class:"Footer-right__text--font" do
+          ご利用に当たって

@@ -1,49 +1,53 @@
+b* {
+  box-sizing: border-box;
+}
+
 .Header {
   height: 70px;
   width: 69vw;
   margin: 0 auto;
-  // background-color: aqua;
   display: flex;
-  .Header-logo {
-    width: 60%;
-    &__image {
-      line-height: 80px;
-      &--pic {
-        width: 200px;
-      }
+}
+
+.Header-logo {
+  width: 60%;
+  &__image {
+    line-height: 80px;
+    &--pic {
+      width: 150px;
     }
   }
-  .Header-right{
-    width: 40%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    &__img {
-      width: 50px;
-      height: 50px;
-      border-radius: 100%;
-      background-color: rosybrown;
-      &--file {
-      display: block;
-      height: 50px;
-      border-radius: 100%;
-      object-fit: cover;
-      width: 100%;
-      }
+}
+
+.Header-right{
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  &__img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    &--file {
+    display: block;
+    height: 45px;
+    border-radius: 100%;
+    object-fit: cover;
+    width: 100%;
     }
-    &__company {
-      font-size: 13px;
-      &--icon {
-        text-decoration: none;
-        color: black;
-      }
+  }
+  &__company {
+    font-size: 13px;
+    &--icon {
+      text-decoration: none;
+      color: black;
     }
-    &__devise {
-      font-size: 13px;
-      &--icon {
-        text-decoration: none;
-        color: black;
-      }
+  }
+  &__devise {
+    font-size: 13px;
+    &--icon {
+      text-decoration: none;
+      color: black;
     }
   }
 }

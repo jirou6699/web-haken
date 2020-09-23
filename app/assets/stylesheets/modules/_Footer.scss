@@ -3,6 +3,40 @@ b* {
 }
 
 .Footer {
-  height: 80px;
-  // background-color: forestgreen;
+  height: 70px;
+  width: 69vw;
+  margin: 0 auto;
+  display: flex;
 }
+
+.Footer-logo {
+  width: 60%;
+  &__image {
+    line-height: 70px;
+    &--pic {
+      width: 150px;
+    }
+  }
+}
+
+.Footer-right{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  &__text {
+    font-size: 13px;
+    &--font, &--center {
+      padding: 0 10px;
+      text-decoration: none;
+      color: black;
+    }
+    &--center {
+      border-left:1px solid black;
+      border-right:1px solid black;
+    }
+  }
+}
+
+
+

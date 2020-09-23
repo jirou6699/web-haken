@@ -36,7 +36,6 @@
         .FormField__label--normal
           = f.label :profile
         .FormField__input--normal
-          = icon('fas', 'user-circle', class: 'FormField__input--normal--file')
           = f.file_field :image
       .actions
         = f.submit "Create Account", class: 'Button UserButton'

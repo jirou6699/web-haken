@@ -10,9 +10,8 @@
           = image_tag 'top3.jpg'
         %li
           = image_tag 'top4.jpg'
-    .Top-login
-      = link_to user_session_path, class: 'Top-login__text' do
-        Login
+    -# .Top-catchcopy
+    -#   自分らしく働く。
 
   .Info-wrapper
     .Title
@@ -99,9 +98,6 @@
                     = icon('fas', 'map-marker-alt')
                   .Text-content__rightlong
                     =match.access
-          -# = link_to match_path(match.id), class: Job-box__link do
-          -#  編集
-
     .Bar-right
       .Search-wrapper
         .Search-title
