@@ -122,7 +122,7 @@
       }
     }
     &__middle {
-      overflow-y: scroll;
+      // overflow-y: scroll;
       height: 1000px;
       // background-color: lightblue;
     }
@@ -134,6 +134,9 @@
   border: 1px solid gainsboro;
   border-radius: 5px;
   padding: 10px;
+  postion: -webkit-sticky;
+  position: sticky;
+  top: 0;
   }
 }
 
