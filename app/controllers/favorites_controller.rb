@@ -1,5 +1,5 @@
 class FavoritesController < ApplicationController
-  before_action :set_action
+  before_action :authenticate_user!
 
   def create
     @favorite = current_user.favorites.create(job_id: params[:job_id])
@@ -11,11 +11,4 @@ class FavoritesController < ApplicationController
     @favorite = current_user.favorites.find_by(job_id: @match.id)
     @favorite.destroy
   end
-
-  private
-
-  def set_action
-    @job = Job.find(params[:job_id])
-  end
-
 end

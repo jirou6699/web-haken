@@ -1,4 +1,5 @@
 class JobsController < ApplicationController
+  
   def index
     @job = Job.new
     @lists = Job.all.order("created_at DESC")

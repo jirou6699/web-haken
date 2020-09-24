@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  
   def create
     @review = Review.create(review_params)
     respond_to do |format|
