@@ -96,9 +96,9 @@
             .Review-top
               .Review-icons
                 .Reiview-icons__face
-                  =image_tag current_user.image.to_s, class: 'Review-icons__face--image'
+                  =image_tag review.user.image.to_s, class: 'Review-icons__face--image'
                 .Review-icons__nickname
-                  =current_user.nickname
+                  =review.user.nickname
               .Review-time
                 =review.updated_at
 
