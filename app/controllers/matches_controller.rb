@@ -2,6 +2,7 @@ class MatchesController < ApplicationController
   
   def index
     @matches = Job.all.order("created_at DESC")
+    @matches = Job.all.page(params[:page]).per(5)
   end
 
   def show

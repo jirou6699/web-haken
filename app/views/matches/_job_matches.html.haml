@@ -54,7 +54,8 @@
         .Bar-left__upper--title
           応募可能な全てのお仕事を公開しています
         .Bar-left__upper--text
-          ページネーションが入ります。
+          - @matches.each do |match|
+            = match.content
       .Bar-left__middle
         - matches.each do |match|
           .Job-box
