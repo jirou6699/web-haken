@@ -66,3 +66,5 @@ gem 'devise'
 gem 'jquery-rails'
 
 gem 'pry-rails'
+
+gem 'kaminari'
