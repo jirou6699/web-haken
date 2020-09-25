@@ -134,7 +134,7 @@
   border: 1px solid gainsboro;
   border-radius: 5px;
   padding: 10px;
-  postion: -webkit-sticky;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   }
@@ -242,24 +242,45 @@
       line-height: 40px;
     }
     &__rightlong {
-     font-size: 14px; 
+      font-size: 14px; 
       // overflow-wrap: break-word;
-
+      
     }
   }
 }
 
 .Search-wrapper {
   height: 100px;
-  .Search-title {
-    border-bottom: 1px solid burlywood;
+}
+
+.Search-title {
+  border-bottom: 1px solid burlywood;
+}
+
+.Search-box {
+  margin-top: 20px;
+  position: relative;
+  &__input {
+    width: 170px;
   }
-  .Search-box {
-    margin-top: 20px;
-    &__input {
-      width: 170px;
-    }
-    &__button {
-    }
+  &__button {
   }
+}
+
+#page-top {  
+  font-size: 77%;
+  position: absolute;
+  bottom: 0;
+  right: 45%;
+}
+#page-top a {
+    text-decoration: none;
+}
+#page-top a:hover {
+    text-decoration: none;
+}
+
+.page-icon {
+  font-size: 40px;
+  opacity: 0.3;
 }
