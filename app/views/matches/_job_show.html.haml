@@ -81,11 +81,12 @@
             %td.Vacancy-item__right
               テスト
         .Question-contents
-          .Question-contents__box
-            %button{:href => "http://www.pikawaka.com", class: "Question-contents__box--btn"}
-              チャットで質問する！
-            -# %button{"data-target" => "#post", "data-toggle" => "modal", :type => "button", class: "Question-contents__box--modal"} 
-            -#   感想を投稿する！ 
+          %button{:href => "http://www.pikawaka.com", class: "Question-contents__box"}
+            .Question-contents__box--red
+              チャットで質問する
+          %button{"data-target" => "#post", "data-toggle" => "modal", :type => "button", class: "Question-contents__box"} 
+            .Question-contents__box--blue
+              感想を投稿する
 
     .Review-wrapper
       みんなの口コミ！（会社・仕事）
@@ -115,26 +116,9 @@
                 .Review-infomation__right--destroy
                   = link_to job_review_path(review.job.id, review.id), method: :delete do
                     =icon('far','trash-alt', class: 'Review-infomation__right--trash')
-
-    -# .Review-wrapper__form
-    -#   =form_with model: [match, review], id: "new-comment", local: true do |form|
-    -#     .Review-box
-    -#       .Review-box__good
-    -#         【よかった点】
-    -#         = form.text_area :good, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
-    -#       .Review-box__bad
-    -#         【わるかった点】
-    -#         = form.text_area :bad, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
-    -#     .Review-button
-    -#       = form.submit '投稿する', class: 'Review-button__submit'
-
-
-  -# ここからはモーダルとajax非同期通信 
-  .container
-    %button{"data-target" => "#post", "data-toggle" => "modal", :type => "button"} つぶやきを投稿する
-  #post.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
-    .modal-dialog{:role => "document"}
-      .modal-content
+    -# ここからはモーダルとajax非同期通信 
+    #post.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
         =form_with model: [match, review], id: "new-comment", local: true do |form|
           .Review-wrapper__form
             .Review-post
@@ -145,6 +129,6 @@
                 .Review-box__bad
                   【わるかった点】
                 = form.text_area :bad, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
-          .Review-button
-            = form.submit '投稿する', class: 'Review-button__submit'
-            %button{"data-dismiss" => "modal", :type => "button", class: 'Review-button__close'} 閉じる
+            .Review-button
+              = form.submit '投稿する', class: 'Review-button__submit'
+              %button{"data-dismiss" => "modal", :type => "button", class: 'Review-button__submit'} 閉じる
