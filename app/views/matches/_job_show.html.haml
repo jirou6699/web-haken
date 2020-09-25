@@ -82,8 +82,10 @@
               テスト
         .Question-contents
           .Question-contents__box
-            = link_to 'http://www.pikawaka.com', class: "Question-contents__box--btn" do
+            %button{:href => "http://www.pikawaka.com", class: "Question-contents__box--btn"}
               チャットで質問する！
+            -# %button{"data-target" => "#post", "data-toggle" => "modal", :type => "button", class: "Question-contents__box--modal"} 
+            -#   感想を投稿する！ 
 
     .Review-wrapper
       みんなの口コミ！（会社・仕事）
@@ -114,16 +116,25 @@
                   = link_to job_review_path(review.job.id, review.id), method: :delete do
                     =icon('far','trash-alt', class: 'Review-infomation__right--trash')
 
-    -# .Review-wrapper__up
-    -#   = image_tag 'image.png', class: 'Review-wrapper__up--image'
+    -# .Review-wrapper__form
+    -#   =form_with model: [match, review], id: "new-comment", local: true do |form|
+    -#     .Review-box
+    -#       .Review-box__good
+    -#         【よかった点】
+    -#         = form.text_area :good, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
+    -#       .Review-box__bad
+    -#         【わるかった点】
+    -#         = form.text_area :bad, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
+    -#     .Review-button
+    -#       = form.submit '投稿する', class: 'Review-button__submit'
 
-  .container.text-center
-  %button.btn.btn-primary.mt-5{"data-target" => "#post", "data-toggle" => "modal", :type => "button"} つぶやきを投稿する
+
+  -# ここからはモーダルとajax非同期通信 
+  .container
+    %button{"data-target" => "#post", "data-toggle" => "modal", :type => "button"} つぶやきを投稿する
   #post.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
     .modal-dialog{:role => "document"}
       .modal-content
-        .Review-wrapper__review
-        感想を書く
         =form_with model: [match, review], id: "new-comment", local: true do |form|
           .Review-wrapper__form
             .Review-post
@@ -136,18 +147,4 @@
                 = form.text_area :bad, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
           .Review-button
             = form.submit '投稿する', class: 'Review-button__submit'
-          .modal-footer
-            %button.btn.btn-secondary{"data-dismiss" => "modal", :type => "button"} 閉じる
-            %button.btn.btn-primary{:type => "button"} 投稿する
-            
-      -# .Review-wrapper__form
-      -#   .Review-post
-      -#     .Review-box
-      -#       .Review-box__good
-      -#         【よかった点】
-      -#       = form.text_area :good, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
-      -#       .Review-box__bad
-      -#         【わるかった点】
-      -#       = form.text_area :bad, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
-      -# .Review-button
-      -#   = form.submit '投稿する', class: 'Review-button__submit'
+            %button{"data-dismiss" => "modal", :type => "button", class: 'Review-button__close'} 閉じる
