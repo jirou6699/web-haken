@@ -32,10 +32,7 @@
             = image_tag match.image2.url, class: 'Job-images__list1--img' if match.image2.present?
           %li.Job-images__list
             = image_tag match.image3.url, class: 'Job-images__list1--img' if match.image3.present?
-          -# %li.Job-images__list
-          -#   = image_tag match.image4.url, class: 'Job-images__list1--img' if match.image4.present?
-          -# %li.Job-images__list
-          -#   = image_tag match.image5.url, class: 'Job-images__list1--img' if match.image5.present?
+
       .Vacancy-contents
         %table.Vacancy-infos
           %tr.Vacancy-item
@@ -84,9 +81,12 @@
             %td.Vacancy-item__right
               テスト
         .Question-contents
-          .Question-contents__box
-            = link_to 'http://www.pikawaka.com', class: "Question-contents__box--btn" do
-              チャットで質問する！
+          %button{:href => "http://www.pikawaka.com", class: "Question-contents__box"}
+            .Question-contents__box--red
+              チャットで質問する
+          %button{"data-target" => "#post", "data-toggle" => "modal", :type => "button", class: "Question-contents__box"} 
+            .Question-contents__box--blue
+              感想を投稿する
 
     .Review-wrapper
       みんなの口コミ！（会社・仕事）
@@ -116,20 +116,19 @@
                 .Review-infomation__right--destroy
                   = link_to job_review_path(review.job.id, review.id), method: :delete do
                     =icon('far','trash-alt', class: 'Review-infomation__right--trash')
-
-    .Review-wrapper__up
-      = image_tag 'image.png', class: 'Review-wrapper__up--image'
-    .Review-wrapper__review
-      感想を書く
-    =form_with model: [match, review], id: "new-comment", local: true do |form|
-      .Review-wrapper__form
-        .Review-post
-          .Review-box
-            .Review-box__good
-              【よかった点】
-            = form.text_area :good, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
-            .Review-box__bad
-              【わるかった点】
-            = form.text_area :bad, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
-      .Review-button
-        = form.submit '投稿する', class: 'Review-button__submit'
+    -# ここからはモーダルとajax非同期通信 
+    #post.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
+      .modal-dialog{:role => "document"}
+        =form_with model: [match, review], id: "new-comment", local: true do |form|
+          .Review-wrapper__form
+            .Review-post
+              .Review-box
+                .Review-box__good
+                  【よかった点】
+                = form.text_area :good, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
+                .Review-box__bad
+                  【わるかった点】
+                = form.text_area :bad, maxlength: 250, class: 'Review-box__text', placeholder: 'ここに文章を入力してください'
+            .Review-button
+              = form.submit '投稿する', class: 'Review-button__submit'
+              %button{"data-dismiss" => "modal", :type => "button", class: 'Review-button__submit'} 閉じる
