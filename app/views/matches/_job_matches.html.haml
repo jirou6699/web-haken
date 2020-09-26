@@ -69,7 +69,12 @@
                   =match.title
               .Job-catch__box
                 .Job-catch__box--star
-                  = render partial: "favorite_ajax", locals: { match: match }
+                  -if current_user.already_favorited?(match) 
+                    = link_to job_favorites_path(match), method: :delete do
+                      = icon('fas', 'star', class: "Job-catch__box--star--color")
+                  - else
+                    = link_to job_favorites_path(match), method: :post do
+                      = icon('far', 'star')
                 .Job-catch__box--text
                   気になる!
                   -# = match.favorites.count
