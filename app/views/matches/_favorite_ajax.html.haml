@@ -3,5 +3,5 @@
     = link_to job_favorites_path(match.id), method: :delete, remote: true do
       = icon('fas', 'star', class: "Job-catch__box--star--color")
   - else
-    = link_to job_favorites_path(match.id), method: :post, remote: true do
+    = link_to job_favorites_path(match.id, ), method: :post, remote: true do
       = icon('far', 'star')

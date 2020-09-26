@@ -112,10 +112,11 @@
                 【わるかった点】
                 .Review-infomation__left--text
                   =review.bad
-              .Review-infomation__right
-                .Review-infomation__right--destroy
-                  = link_to job_review_path(review.job.id, review.id), method: :delete do
-                    =icon('far','trash-alt', class: 'Review-infomation__right--trash')
+              - if user_signed_in? && current_user.id == review.user_id
+                .Review-infomation__right
+                  .Review-infomation__right--destroy
+                    = link_to job_review_path(review.job.id, review.id), method: :delete do
+                      =icon('far','trash-alt', class: 'Review-infomation__right--trash')
     -# ここからはモーダルとajax非同期通信 
     #post.modal.fade{"aria-hidden" => "true", :role => "dialog", :tabindex => "-1"}
       .modal-dialog{:role => "document"}
