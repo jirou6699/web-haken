@@ -34,37 +34,37 @@
             .Vacancy-writes__left
               勤務地
             .Vacancy-writes__right
-              = form.text_field :description, placeholder: '東京都　品川区'
+              = form.text_field :description, maxlength: 22, placeholder: '東京都　品川区'
           .Vacancy-writes
             .Vacancy-writes__left
               給与
             .Vacancy-writes__right
-              = form.text_field :salary, placeholder: '時給1500円〜'
+              = form.text_field :salary, maxlength: 30, placeholder: '時給1500円〜'
           .Vacancy-writes
             .Vacancy-writes__left
               アクセス
             .Vacancy-writes__right
-              = form.text_field :access, placeholder: '各線　品川駅　徒歩　10分'
+              = form.text_field :access, maxlength: 30, placeholder: '各線　品川駅　徒歩　10分'
           .Vacancy-writes
             .Vacancy-writes__left
               勤務時間
             .Vacancy-writes__right
-              = form.text_field :time, placeholder: '平日　09:00〜18:00'
+              = form.text_field :time, maxlength: 30, placeholder: '平日　09:00〜18:00'
           .Vacancy-writes
             .Vacancy-writes__left
               曜日・日数
             .Vacancy-writes__right
-              = form.text_field :week, placeholder: '平日（月曜〜金曜）土・祝日・日は休み'
+              = form.text_field :week, maxlength: 30, placeholder: '平日（月曜〜金曜）土・祝日・日は休み'
           .Vacancy-writes
             .Vacancy-writes__left
               募集人数
             .Vacancy-writes__right
-              = form.text_field :emplyee, placeholder: '３人'
+              = form.text_field :emplyee, maxlength: 30, placeholder: '３人'
           .Vacancy-writes
             .Vacancy-writes__left
               契約期間
             .Vacancy-writes__right
-              = form.text_field :term, placeholder: '長期'
+              = form.text_field :term, maxlength: 30, placeholder: '長期'
         
       .Pr-writes
         .Pr-writes__title

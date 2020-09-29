@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_21_025036) do
+ActiveRecord::Schema.define(version: 2020_09_28_165713) do
 
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "job_id"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2020_09_21_025036) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "rate"
     t.index ["job_id"], name: "index_reviews_on_job_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
