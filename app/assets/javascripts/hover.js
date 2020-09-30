@@ -2,7 +2,7 @@ $(function () {
   $(".Header-right__devise").on("mouseover", function () {
     console.log(this)
     $(this).css({
-      backgroundColor: "#fffac2",
+      backgroundColor: "#EDEBE8",
     });
   });
     

@@ -12,5 +12,6 @@ class MatchesController < ApplicationController
 
   def search
     @matches = Job.search(params[:keyword])
+    @matches = @matches.page(params[:page])
   end
 end
