@@ -21,7 +21,7 @@
     .Header-right
       - if user_signed_in?
         .Header-right__img
-          = image_tag current_user.image.to_s, class: 'Header-right__img--file'
+          -# = image_tag current_user.image.to_s, class: 'Header-right__img--file'
         .Header-right__devise
           .Header-right__devise--icon
             = icon('far', 'building')
