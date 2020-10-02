@@ -23,30 +23,30 @@
         .Header-right__img
           = image_tag current_user.image.to_s, class: 'Header-right__img--file'
         .Header-right__devise
-          = link_to jobs_path, class:"Header-right__devise--icon" do
+          .Header-right__devise--icon
             = icon('far', 'building')
-          .Header-right__devise--text
+          = link_to jobs_path, class:"Header-right__devise--text" do
             企業担当者はこちら
         .Header-right__devise
-          = link_to destroy_user_session_path, class:"Header-right__devise--icon", method: :delete do
+          .Header-right__devise--icon
             = icon('fas', 'sign-out-alt')
-          .Header-right__devise-text
+          = link_to destroy_user_session_path, class:"Header-right__devise--text", method: :delete do
             サインアウト
       - else
         .Header-right__devise
-          = link_to jobs_path, class: "Header-right__devise--icon" do
+          .Header-right__devise--icon
             = icon('far', 'building')
-          .Header-right__devise-text
+          = link_to jobs_path, class: "Header-right__devise--text" do
             企業担当者はこちら
         .Header-right__devise
-          = link_to user_session_path, class:"Header-right__devise--icon" do
+          .Header-right__devise--icon
             = icon('fas', 'user')
-          .Header-right__devise-text
+          = link_to user_session_path, class:"Header-right__devise--text" do
             ログイン
         .Header-right__devise
-          = link_to new_user_registration_path, class:"Header-right__devise--icon" do
+          .Header-right__devise--icon
             = icon('fas', 'sign-in-alt')
-          .Header-right__devise-text
+          = link_to new_user_registration_path, class:"Header-right__devise--text" do
             サインイン
   = yield
   .Footer
