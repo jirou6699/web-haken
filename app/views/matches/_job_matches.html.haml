@@ -70,9 +70,7 @@
               .Job-catch__box
                 .Job-catch__box--star
                   = render partial: "favorite", locals: { match: match }
-                .Job-catch__box--text
-                  気になる!
-                  -# = match.favorites.count
+                
             .Contents
               %a{ href: match_path(match.id), class: "Contents__link" } 
               .Content-left

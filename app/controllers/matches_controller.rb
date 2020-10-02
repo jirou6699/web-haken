@@ -1,4 +1,5 @@
 class MatchesController < ApplicationController
+  before_action :authenticate_user!, only:[:show, :serch]
   
   def index
     @matches = Job.all.order("created_at DESC").page(params[:page]).per(4)
