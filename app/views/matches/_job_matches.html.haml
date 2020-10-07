@@ -24,23 +24,26 @@
         .Message-lists__box--date
           2020/09/24
         .Message-lists__box--message
-          キャプションキャプションキャプションキャプションキャプション
+          = link_to "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/koyou_roudou/roudoukijun/minimumichiran/", class: "Message-lists__box--message--color" do
+            最低賃金の改訂について
       .Message-lists__box
         .Message-lists__box--date
-          2020/08/24
+          2020/06/24
         .Message-lists__box--message
-          キャプションキャプションキャプションキャプションキャプション
+          = link_to "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000088382_00006.html", class: "Message-lists__box--message--color" do
+            新型コロナウィルス感染症に伴う労働者派遣に関するQ&A
       .Message-lists__box
         .Message-lists__box--date
-          2020/07/24
+          2020/04/24
         .Message-lists__box--message
-          キャプションキャプションキャプションキャプションキャプション
+          = link_to "https://www.mhlw.go.jp/hatarakikata/same.html", class: "Message-lists__box--message--color" do
+            働き方改革支援のご案内
       .Message-lists__box
         .Message-lists__box--date
           2020/04/01
         .Message-lists__box--message
           = link_to "https://www.neo-career.co.jp/humanresource/knowhow/c-content-parttime-douitutinkinn-190604/", class: "Message-lists__box--message--color" do
-            「同一労働・同一賃金」が派遣社員にもたらす影響とは？
+            同一労働・同一賃金が派遣社員にもたらす影響とは？
    
   .Under-info
     .Under-info__icon
@@ -70,6 +73,9 @@
               .Job-catch__box
                 .Job-catch__box--star
                   = render partial: "favorite", locals: { match: match }
+                -if user_signed_in?
+                  .Job-catch__box--text
+                    気になる!
                 
             .Contents
               %a{ href: match_path(match.id), class: "Contents__link" } 

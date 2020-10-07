@@ -13,9 +13,9 @@ class CreateJobs < ActiveRecord::Migration[6.0]
       t.string :week,            null: false
       t.string :emplyee,         null: false
       t.string :term,            null: false
-      t.string :pr1,              null: false
-      t.string :pr2,              null: false
-      t.string :pr3,              null: false
+      t.string :pr1,             null: false
+      t.string :pr2,             null: false
+      t.string :pr3,             null: false
       t.timestamps
     end
   end

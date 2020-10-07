@@ -2,12 +2,8 @@
   -if current_user.already_favorited?(match) 
     = link_to job_favorites_path(match.id), method: :delete, remote: true do
       = icon('fas', 'star', class: "Job-catch__box--star--color")
-    .Job-catch__box--text
-      気になる!
     -# = match.favorites.count
   - else
     = link_to job_favorites_path(match.id), method: :post, remote: true do
       = icon('far', 'star')
-    .Job-catch__box--text
-      気になる!
     -# = match.favorites.count

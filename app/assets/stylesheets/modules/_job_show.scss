@@ -134,12 +134,14 @@
 .Review-wrapper {
   margin-top: 30px;
   &__title {
+    border: 1px solid lightgray;
     // background-color: lightgoldenrodyellow;
     height: 600px;
-    border-bottom: 1px solid lightgray;
     overflow: scroll;
+    padding: 5px;
   }
   &__list {
+    border-bottom: 1px solid lightgray;
     padding: 15px;
     background-color: linen;
   }
@@ -239,7 +241,6 @@
       margin: 5px 10px;
       border-radius: 5px;
       border: 1px solid lightsteelblue;
-      // border: 1px solid lightslategrey;
     } 
   }
   &__right {
