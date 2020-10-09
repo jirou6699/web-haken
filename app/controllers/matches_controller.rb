@@ -11,14 +11,6 @@ class MatchesController < ApplicationController
     @reviews = @match.reviews.includes(:user)
   end
 
-  def new
-    
-  end
-
-  def create
-
-  end
-
   def search
     @matches = Job.search(params[:keyword])
     @matches = @matches.page(params[:page])
