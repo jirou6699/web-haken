@@ -6,5 +6,37 @@
   max-width: 800px;
   height: 100vh;
   margin: 0 auto;
-  background-color: lightgray;
+  padding: 20px;
+  border: 1px solid lightgray;
+  .Contact-title {
+    background-color: lightgray;
+    font-size: 20px;
+  }
+  .Contact-message {
+    margin: 20px 0;
+  }
+  .Contact-item {
+    display: flex;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .Input-field {
+    width: 600px;
+    height: 40px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+  }
+  .Contact-btn {
+    &__color{
+      border: none;
+      margin-top: 20px;
+      width: 300px;
+      height: 50px;
+    }
+  }
+  .Input-area {
+    height: 50px;
+    width:600px;
+    
+  }
 }

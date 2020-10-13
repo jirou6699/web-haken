@@ -9,19 +9,19 @@
         弊社より改めてご連絡申し上げます。
       .Contact-item
         .Contact-item__left
-          お名前（必須）
+          お名前
         .Contact-item__right
           必須
-        = form.text_field :title, class: '#', placeholder: '◎◎'
+      = form.text_field :title, class: 'Input-field', placeholder: '◎◎'
       .Contact-item
         .Contact-item__left
           メールアドレス
         .Contact-item__right
           必須
-        = form.text_field :title, class: '#', placeholder: '◎◎'
+      = form.text_field :title, class: 'Input-field', placeholder: '◎◎'
       .Contact-item
         お問い合わせ内容
         .Contact-item__left
-          = form.text_area :title, class: '#', placeholder: '◎◎'
+      = form.text_area :title, class: 'Input-area', placeholder: '◎◎'
       .Contact-btn
-        = form.submit '問合せを送信する', class: '#'
+      = form.submit '送信する', class: 'Contact-btn__color'
