@@ -1,27 +1,30 @@
 .Contact-wrapper
-  %form.Form
-    = form_with url: "#" , local: true do |form|
-      .Contact-title
-        お問い合わせ
-      .Contact-message
-        下記のフォームに必要事項を記載し、内容をご確認の上、送信ボタンをくクリックしてください。
-        %br/
-        弊社より改めてご連絡申し上げます。
-      .Contact-item
-        .Contact-item__left
-          お名前
-        .Contact-item__right
-          必須
-      = form.text_field :title, class: 'Input-field', placeholder: '◎◎'
-      .Contact-item
-        .Contact-item__left
-          メールアドレス
-        .Contact-item__right
-          必須
-      = form.text_field :title, class: 'Input-field', placeholder: '◎◎'
-      .Contact-item
-        お問い合わせ内容
-        .Contact-item__left
-      = form.text_area :title, class: 'Input-area', placeholder: '◎◎'
-      .Contact-btn
-      = form.submit '送信する', class: 'Contact-btn__color'
+  = form_with model: @contact, local: true do |form|
+    .Contact-title
+      お問い合わせ
+    .Contact-message
+      下記のフォームに必要事項を記載し、内容をご確認の上、送信ボタンをくクリックしてください。
+      %br/
+      弊社より改めてご連絡申し上げます。
+    .Contact-item
+      .Contact-item__left
+        お名前
+      .Contact-item__right
+        必須
+    = form.text_field :name, class: 'Input-field'
+    .Contact-item
+      .Contact-item__left
+        メールアドレス
+      .Contact-item__right
+        必須
+    = form.text_field :email, class: 'Input-field'
+    .Contact-item
+      タイトル
+      .Contact-item__left
+    = form.text_field :title, class: 'Input-field'
+    .Contact-item
+      お問い合わせ内容
+      .Contact-item__left
+    = form.text_area :body, class: 'Input-area'
+    .Contact-btn
+    = form.submit '送信する', class: 'Contact-btn__color'
