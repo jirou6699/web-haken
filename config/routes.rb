@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root "matches#index"
+  resources :contacts, only: [:new, :create]
   resources :matches, only: [:show] do
     collection do
       get 'search'

@@ -81,9 +81,9 @@
             %td.Vacancy-item__right
               テスト
         .Question-contents
-          %button{:href => "http://www.pikawaka.com", class: "Question-contents__box"}
-            .Question-contents__box--red
-              チャットで質問する
+          %button{:href => "#", class: "Question-contents__box"}
+            = link_to new_contact_path,class: "Question-contents__box--red" do
+              担当者に質問する
           %button{"data-target" => "#post", "data-toggle" => "modal", :type => "button", class: "Question-contents__box"} 
             .Question-contents__box--blue
               感想を投稿する
