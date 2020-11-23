@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: web_haken_production
-  username: web_haken
-  password: <%= ENV['WEB_HAKEN_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
