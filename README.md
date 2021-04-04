@@ -18,8 +18,8 @@
 ## URL
 (http://18.180.198.199/)
 下記のログイン情報をご参考いただけます。
- ＊ メールアドレス ： tarou@gmail.com
- * パスワード    ： tttttttt
+* メールアドレス ： tarou@gmail.com
+* パスワード    ： tttttttt
 
 ## 機能一覧
  * 新規登録・ログイン機能（Device）
